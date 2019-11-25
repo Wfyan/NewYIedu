@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.inter.CrouseInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.yi.entity.CrouseInfo" >
+    <id column="cid" property="cid" jdbcType="INTEGER" />
+    <result column="tecid" property="tecid" jdbcType="VARCHAR" />
+    <result column="kid" property="kid" jdbcType="INTEGER" />
+    <result column="cname" property="cname" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="REAL" />
+    <result column="add_day" property="addDay" jdbcType="TIMESTAMP" />
+    <result column="crouse_time" property="crouseTime" jdbcType="INTEGER" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="integral" property="integral" jdbcType="DOUBLE" />
+    <result column="onchoose" property="onchoose" jdbcType="CHAR" />
+    <result column="crouse_introduce" property="crouseIntroduce" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    cid, tecid, kid, cname, score, add_day, crouse_time, price, integral, onchoose, crouse_introduce, 
+    img
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from crouse_info
+    where cid = #{cid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from crouse_info
+    where cid = #{cid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.yi.entity.CrouseInfo" >
+    insert into crouse_info (cid, tecid, kid, 
+      cname, score, add_day, 
+      crouse_time, price, integral, 
+      onchoose, crouse_introduce, img
+      )
+    values (#{cid,jdbcType=INTEGER}, #{tecid,jdbcType=VARCHAR}, #{kid,jdbcType=INTEGER}, 
+      #{cname,jdbcType=VARCHAR}, #{score,jdbcType=REAL}, #{addDay,jdbcType=TIMESTAMP}, 
+      #{crouseTime,jdbcType=INTEGER}, #{price,jdbcType=DOUBLE}, #{integral,jdbcType=DOUBLE}, 
+      #{onchoose,jdbcType=CHAR}, #{crouseIntroduce,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yi.entity.CrouseInfo" >
+    insert into crouse_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cid != null" >
+        cid,
+      </if>
+      <if test="tecid != null" >
+        tecid,
+      </if>
+      <if test="kid != null" >
+        kid,
+      </if>
+      <if test="cname != null" >
+        cname,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+      <if test="addDay != null" >
+        add_day,
+      </if>
+      <if test="crouseTime != null" >
+        crouse_time,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="integral != null" >
+        integral,
+      </if>
+      <if test="onchoose != null" >
+        onchoose,
+      </if>
+      <if test="crouseIntroduce != null" >
+        crouse_introduce,
+      </if>
+      <if test="img != null" >
+        img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="tecid != null" >
+        #{tecid,jdbcType=VARCHAR},
+      </if>
+      <if test="kid != null" >
+        #{kid,jdbcType=INTEGER},
+      </if>
+      <if test="cname != null" >
+        #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=REAL},
+      </if>
+      <if test="addDay != null" >
+        #{addDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crouseTime != null" >
+        #{crouseTime,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="integral != null" >
+        #{integral,jdbcType=DOUBLE},
+      </if>
+      <if test="onchoose != null" >
+        #{onchoose,jdbcType=CHAR},
+      </if>
+      <if test="crouseIntroduce != null" >
+        #{crouseIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        #{img,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yi.entity.CrouseInfo" >
+    update crouse_info
+    <set >
+      <if test="tecid != null" >
+        tecid = #{tecid,jdbcType=VARCHAR},
+      </if>
+      <if test="kid != null" >
+        kid = #{kid,jdbcType=INTEGER},
+      </if>
+      <if test="cname != null" >
+        cname = #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=REAL},
+      </if>
+      <if test="addDay != null" >
+        add_day = #{addDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crouseTime != null" >
+        crouse_time = #{crouseTime,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="integral != null" >
+        integral = #{integral,jdbcType=DOUBLE},
+      </if>
+      <if test="onchoose != null" >
+        onchoose = #{onchoose,jdbcType=CHAR},
+      </if>
+      <if test="crouseIntroduce != null" >
+        crouse_introduce = #{crouseIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        img = #{img,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where cid = #{cid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yi.entity.CrouseInfo" >
+    update crouse_info
+    set tecid = #{tecid,jdbcType=VARCHAR},
+      kid = #{kid,jdbcType=INTEGER},
+      cname = #{cname,jdbcType=VARCHAR},
+      score = #{score,jdbcType=REAL},
+      add_day = #{addDay,jdbcType=TIMESTAMP},
+      crouse_time = #{crouseTime,jdbcType=INTEGER},
+      price = #{price,jdbcType=DOUBLE},
+      integral = #{integral,jdbcType=DOUBLE},
+      onchoose = #{onchoose,jdbcType=CHAR},
+      crouse_introduce = #{crouseIntroduce,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR}
+    where cid = #{cid,jdbcType=INTEGER}
+  </update>
+</mapper>

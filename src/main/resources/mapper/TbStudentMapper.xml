@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.inter.TbStudentMapper" >
+  <resultMap id="BaseResultMap" type="com.yi.entity.TbStudent" >
+    <id column="stuid" property="stuid" jdbcType="VARCHAR" />
+    <result column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="petname" property="petname" jdbcType="VARCHAR" />
+    <result column="stuname" property="stuname" jdbcType="VARCHAR" />
+    <result column="stupassword" property="stupassword" jdbcType="VARCHAR" />
+    <result column="stusex" property="stusex" jdbcType="VARCHAR" />
+    <result column="stuage" property="stuage" jdbcType="INTEGER" />
+    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="role" property="role" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="qq" property="qq" jdbcType="VARCHAR" />
+    <result column="registertime" property="registertime" jdbcType="TIMESTAMP" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="stuintroduce" property="stuintroduce" jdbcType="VARCHAR" />
+    <result column="integral" property="integral" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    stuid, role_id, petname, stuname, stupassword, stusex, stuage, birthday, role, phone, 
+    email, qq, registertime, address, stuintroduce, integral, state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_student
+    where stuid = #{stuid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_student
+    where stuid = #{stuid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.yi.entity.TbStudent" >
+    insert into tb_student (stuid, role_id, petname, 
+      stuname, stupassword, stusex, 
+      stuage, birthday, role, 
+      phone, email, qq, registertime, 
+      address, stuintroduce, integral, 
+      state)
+    values (#{stuid,jdbcType=VARCHAR}, #{roleId,jdbcType=INTEGER}, #{petname,jdbcType=VARCHAR}, 
+      #{stuname,jdbcType=VARCHAR}, #{stupassword,jdbcType=VARCHAR}, #{stusex,jdbcType=VARCHAR}, 
+      #{stuage,jdbcType=INTEGER}, #{birthday,jdbcType=TIMESTAMP}, #{role,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{qq,jdbcType=VARCHAR}, #{registertime,jdbcType=TIMESTAMP}, 
+      #{address,jdbcType=VARCHAR}, #{stuintroduce,jdbcType=VARCHAR}, #{integral,jdbcType=INTEGER}, 
+      #{state,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yi.entity.TbStudent" >
+    insert into tb_student
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="stuid != null" >
+        stuid,
+      </if>
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="petname != null" >
+        petname,
+      </if>
+      <if test="stuname != null" >
+        stuname,
+      </if>
+      <if test="stupassword != null" >
+        stupassword,
+      </if>
+      <if test="stusex != null" >
+        stusex,
+      </if>
+      <if test="stuage != null" >
+        stuage,
+      </if>
+      <if test="birthday != null" >
+        birthday,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="qq != null" >
+        qq,
+      </if>
+      <if test="registertime != null" >
+        registertime,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="stuintroduce != null" >
+        stuintroduce,
+      </if>
+      <if test="integral != null" >
+        integral,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="stuid != null" >
+        #{stuid,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null" >
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="petname != null" >
+        #{petname,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="stupassword != null" >
+        #{stupassword,jdbcType=VARCHAR},
+      </if>
+      <if test="stusex != null" >
+        #{stusex,jdbcType=VARCHAR},
+      </if>
+      <if test="stuage != null" >
+        #{stuage,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="registertime != null" >
+        #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="stuintroduce != null" >
+        #{stuintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="integral != null" >
+        #{integral,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yi.entity.TbStudent" >
+    update tb_student
+    <set >
+      <if test="roleId != null" >
+        role_id = #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="petname != null" >
+        petname = #{petname,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        stuname = #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="stupassword != null" >
+        stupassword = #{stupassword,jdbcType=VARCHAR},
+      </if>
+      <if test="stusex != null" >
+        stusex = #{stusex,jdbcType=VARCHAR},
+      </if>
+      <if test="stuage != null" >
+        stuage = #{stuage,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null" >
+        birthday = #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="registertime != null" >
+        registertime = #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="stuintroduce != null" >
+        stuintroduce = #{stuintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="integral != null" >
+        integral = #{integral,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+    </set>
+    where stuid = #{stuid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yi.entity.TbStudent" >
+    update tb_student
+    set role_id = #{roleId,jdbcType=INTEGER},
+      petname = #{petname,jdbcType=VARCHAR},
+      stuname = #{stuname,jdbcType=VARCHAR},
+      stupassword = #{stupassword,jdbcType=VARCHAR},
+      stusex = #{stusex,jdbcType=VARCHAR},
+      stuage = #{stuage,jdbcType=INTEGER},
+      birthday = #{birthday,jdbcType=TIMESTAMP},
+      role = #{role,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      registertime = #{registertime,jdbcType=TIMESTAMP},
+      address = #{address,jdbcType=VARCHAR},
+      stuintroduce = #{stuintroduce,jdbcType=VARCHAR},
+      integral = #{integral,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER}
+    where stuid = #{stuid,jdbcType=VARCHAR}
+  </update>
+</mapper>
