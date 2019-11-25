@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.mapper.TbAuthsInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.yi.entity.TbAuthsInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="stuid" property="stuid" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="identitytype" property="identitytype" jdbcType="VARCHAR" />
+    <result column="indentifier" property="indentifier" jdbcType="VARCHAR" />
+    <result column="certificate" property="certificate" jdbcType="VARCHAR" />
+    <result column="ifverified" property="ifverified" jdbcType="BIT" />
+    <result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, stuid, state, identitytype, indentifier, certificate, ifverified, addtime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_auths_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_auths_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.yi.entity.TbAuthsInfo" >
+    insert into tb_auths_info (id, stuid, state, 
+      identitytype, indentifier, certificate, 
+      ifverified, addtime)
+    values (#{id,jdbcType=INTEGER}, #{stuid,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, 
+      #{identitytype,jdbcType=VARCHAR}, #{indentifier,jdbcType=VARCHAR}, #{certificate,jdbcType=VARCHAR}, 
+      #{ifverified,jdbcType=BIT}, #{addtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yi.entity.TbAuthsInfo" >
+    insert into tb_auths_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="stuid != null" >
+        stuid,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="identitytype != null" >
+        identitytype,
+      </if>
+      <if test="indentifier != null" >
+        indentifier,
+      </if>
+      <if test="certificate != null" >
+        certificate,
+      </if>
+      <if test="ifverified != null" >
+        ifverified,
+      </if>
+      <if test="addtime != null" >
+        addtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="stuid != null" >
+        #{stuid,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="identitytype != null" >
+        #{identitytype,jdbcType=VARCHAR},
+      </if>
+      <if test="indentifier != null" >
+        #{indentifier,jdbcType=VARCHAR},
+      </if>
+      <if test="certificate != null" >
+        #{certificate,jdbcType=VARCHAR},
+      </if>
+      <if test="ifverified != null" >
+        #{ifverified,jdbcType=BIT},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yi.entity.TbAuthsInfo" >
+    update tb_auths_info
+    <set >
+      <if test="stuid != null" >
+        stuid = #{stuid,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="identitytype != null" >
+        identitytype = #{identitytype,jdbcType=VARCHAR},
+      </if>
+      <if test="indentifier != null" >
+        indentifier = #{indentifier,jdbcType=VARCHAR},
+      </if>
+      <if test="certificate != null" >
+        certificate = #{certificate,jdbcType=VARCHAR},
+      </if>
+      <if test="ifverified != null" >
+        ifverified = #{ifverified,jdbcType=BIT},
+      </if>
+      <if test="addtime != null" >
+        addtime = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yi.entity.TbAuthsInfo" >
+    update tb_auths_info
+    set stuid = #{stuid,jdbcType=VARCHAR},
+      state = #{state,jdbcType=INTEGER},
+      identitytype = #{identitytype,jdbcType=VARCHAR},
+      indentifier = #{indentifier,jdbcType=VARCHAR},
+      certificate = #{certificate,jdbcType=VARCHAR},
+      ifverified = #{ifverified,jdbcType=BIT},
+      addtime = #{addtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

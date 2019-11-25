@@ -91,10 +91,10 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <select id="getByName" resultMap="BaseResultMap">
-    select * from tb_manager where name = #{username}
+    select * from tb_manager as a where a.name = #{userName}
   </select>
   <select id="goLogin" resultMap="BaseResultMap">
-    select * from tb_manager where name = #{ name } and password = #{password}
+    select * from tb_manager as a where a.name = #{ name } and password = #{password}
   </select>
   <select id="selectByPhone" resultMap="BaseResultMap">
     select * from tb_manager where phone = #{ phone }

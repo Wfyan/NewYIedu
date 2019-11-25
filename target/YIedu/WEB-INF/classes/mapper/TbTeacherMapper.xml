@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.mapper.TbTeacherMapper" >
+  <resultMap id="BaseResultMap" type="com.yi.entity.TbTeacher" >
+    <id column="tecid" property="tecid" jdbcType="VARCHAR" />
+    <result column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="tecname" property="tecname" jdbcType="VARCHAR" />
+    <result column="tecpassword" property="tecpassword" jdbcType="VARCHAR" />
+    <result column="role" property="role" jdbcType="VARCHAR" />
+    <result column="tecage" property="tecage" jdbcType="INTEGER" />
+    <result column="tecsex" property="tecsex" jdbcType="VARCHAR" />
+    <result column="tecmajor" property="tecmajor" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="qq" property="qq" jdbcType="VARCHAR" />
+    <result column="registertime" property="registertime" jdbcType="TIMESTAMP" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="tecintroduce" property="tecintroduce" jdbcType="VARCHAR" />
+    <result column="integral" property="integral" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    tecid, role_id, tecname, tecpassword, role, tecage, tecsex, tecmajor, phone, email, 
+    qq, registertime, address, tecintroduce, integral, state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_teacher
+    where tecid = #{tecid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_teacher
+    where tecid = #{tecid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.yi.entity.TbTeacher" >
+    insert into tb_teacher (tecid, role_id, tecname, 
+      tecpassword, role, tecage, 
+      tecsex, tecmajor, phone, 
+      email, qq, registertime, 
+      address, tecintroduce, integral, 
+      state)
+    values (#{tecid,jdbcType=VARCHAR}, #{roleId,jdbcType=INTEGER}, #{tecname,jdbcType=VARCHAR}, 
+      #{tecpassword,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR}, #{tecage,jdbcType=INTEGER}, 
+      #{tecsex,jdbcType=VARCHAR}, #{tecmajor,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{qq,jdbcType=VARCHAR}, #{registertime,jdbcType=TIMESTAMP}, 
+      #{address,jdbcType=VARCHAR}, #{tecintroduce,jdbcType=VARCHAR}, #{integral,jdbcType=INTEGER}, 
+      #{state,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yi.entity.TbTeacher" >
+    insert into tb_teacher
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tecid != null" >
+        tecid,
+      </if>
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="tecname != null" >
+        tecname,
+      </if>
+      <if test="tecpassword != null" >
+        tecpassword,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="tecage != null" >
+        tecage,
+      </if>
+      <if test="tecsex != null" >
+        tecsex,
+      </if>
+      <if test="tecmajor != null" >
+        tecmajor,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="qq != null" >
+        qq,
+      </if>
+      <if test="registertime != null" >
+        registertime,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="tecintroduce != null" >
+        tecintroduce,
+      </if>
+      <if test="integral != null" >
+        integral,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tecid != null" >
+        #{tecid,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null" >
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="tecname != null" >
+        #{tecname,jdbcType=VARCHAR},
+      </if>
+      <if test="tecpassword != null" >
+        #{tecpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="tecage != null" >
+        #{tecage,jdbcType=INTEGER},
+      </if>
+      <if test="tecsex != null" >
+        #{tecsex,jdbcType=VARCHAR},
+      </if>
+      <if test="tecmajor != null" >
+        #{tecmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="registertime != null" >
+        #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="tecintroduce != null" >
+        #{tecintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="integral != null" >
+        #{integral,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yi.entity.TbTeacher" >
+    update tb_teacher
+    <set >
+      <if test="roleId != null" >
+        role_id = #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="tecname != null" >
+        tecname = #{tecname,jdbcType=VARCHAR},
+      </if>
+      <if test="tecpassword != null" >
+        tecpassword = #{tecpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="tecage != null" >
+        tecage = #{tecage,jdbcType=INTEGER},
+      </if>
+      <if test="tecsex != null" >
+        tecsex = #{tecsex,jdbcType=VARCHAR},
+      </if>
+      <if test="tecmajor != null" >
+        tecmajor = #{tecmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="registertime != null" >
+        registertime = #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="tecintroduce != null" >
+        tecintroduce = #{tecintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="integral != null" >
+        integral = #{integral,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+    </set>
+    where tecid = #{tecid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yi.entity.TbTeacher" >
+    update tb_teacher
+    set role_id = #{roleId,jdbcType=INTEGER},
+      tecname = #{tecname,jdbcType=VARCHAR},
+      tecpassword = #{tecpassword,jdbcType=VARCHAR},
+      role = #{role,jdbcType=VARCHAR},
+      tecage = #{tecage,jdbcType=INTEGER},
+      tecsex = #{tecsex,jdbcType=VARCHAR},
+      tecmajor = #{tecmajor,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      registertime = #{registertime,jdbcType=TIMESTAMP},
+      address = #{address,jdbcType=VARCHAR},
+      tecintroduce = #{tecintroduce,jdbcType=VARCHAR},
+      integral = #{integral,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER}
+    where tecid = #{tecid,jdbcType=VARCHAR}
+  </update>
+</mapper>
