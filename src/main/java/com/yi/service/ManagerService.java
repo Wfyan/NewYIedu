@@ -2,6 +2,8 @@ package com.yi.service;
 
 import com.yi.entity.TbManager;
 
+import java.util.List;
+
 public interface ManagerService {
     int deleteByPrimaryKey(Integer id);
 
@@ -15,11 +17,17 @@ public interface ManagerService {
 
     int updateByPrimaryKey(TbManager record);
     /**
+     * 查询所有数据
+     * @return
+     */
+    List<TbManager> selectAll();
+    /**
      * 根据用户名获取信息
      * @param userName
      * @return
      */
     TbManager getByName(String userName);
+
     /**
      * 根据账号密码获取信息（用于登录）
      * @param name

@@ -1,6 +1,6 @@
 package com.yi.controller;
 
-import com.yi.service.LoginService;
+import com.yi.service.ManagerLoginService;
 import com.yi.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     @Autowired
-    private LoginService service;
+    private ManagerLoginService managerLoginService;
 
-    @RequestMapping("/goLogin")
+    @RequestMapping("/manager/goLogin")
     public Result authLogin(String name, String password) {
-       return service.goLogin(name,password);
+       return managerLoginService.goLogin(name,password);
     }
+
+
 
 }

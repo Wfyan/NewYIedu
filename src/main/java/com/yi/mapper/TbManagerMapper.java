@@ -3,6 +3,8 @@ package com.yi.mapper;
 import com.yi.entity.TbManager;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface TbManagerMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -15,6 +17,12 @@ public interface TbManagerMapper {
     int updateByPrimaryKeySelective(TbManager record);
 
     int updateByPrimaryKey(TbManager record);
+
+    /**
+     * 查询所有数据
+     * @return
+     */
+    List<TbManager> selectAll();
 
     /**
      * 根据用户名获取信息

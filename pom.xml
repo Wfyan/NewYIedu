@@ -16,6 +16,21 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <spring.Version>5.1.0.RELEASE</spring.Version>
+    <logback.Version>1.1.1</logback.Version>
+    <mysql.Version>5.1.38</mysql.Version>
+    <c3p0.Version>0.9.1.2</c3p0.Version>
+    <mybstis.Version>3.3.0</mybstis.Version>
+    <mybatisSpring.Version>1.2.3</mybatisSpring.Version>
+    <pageHelper.Version>5.1.7</pageHelper.Version>
+    <shiroCore.Version>1.2.3</shiroCore.Version>
+    <shiro.Version>1.4.0</shiro.Version>
+    <apachecommons.Version>3.8.1</apachecommons.Version>
+    <jwt.Version>3.2.0</jwt.Version>
+    <swagger.Version>2.6.1</swagger.Version>
+    <swaggerIO.Version>1.5.22</swaggerIO.Version>
+    <Jedis.Version>2.7.3</Jedis.Version>
+    <protostuff.Version>1.0.8</protostuff.Version>
   </properties>
 
   <dependencies>
@@ -65,6 +80,12 @@
       <version>1.2.3</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.1.7</version>
+    </dependency>
+
     <!-- 3.Servlet web -->
     <dependency>
       <groupId>taglibs</groupId>
@@ -92,45 +113,116 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
     </dependency>
     <!-- 2)Spring DAO层 -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${spring.Version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.1</version>
     </dependency>
     <!-- 3)Spring web -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
     </dependency>
     <!-- 4)Spring test -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>${spring.Version}</version>
+    </dependency>
+    <!-- 通用工具 -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.9.7</version>
+    </dependency>
+    <!--短信接口-->
+    <dependency>
+      <groupId>com.github.qcloudsms</groupId>
+      <artifactId>qcloudsms</artifactId>
+      <version>1.0.6</version>
+    </dependency>
+    <!--shiro核心类库-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-core</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <!--shiro-web-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-web</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+    <!--shiro的spring-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-spring</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.auth0</groupId>
+      <artifactId>java-jwt</artifactId>
+      <version>3.2.0</version>
+    </dependency>
+
+    <!-- swagger -->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>2.6.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+    <dependency>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-annotations</artifactId>
+      <version>1.5.22</version>
     </dependency>
 
     <!-- redis客户端:Jedis -->

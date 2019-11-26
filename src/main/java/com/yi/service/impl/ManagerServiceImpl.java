@@ -6,6 +6,8 @@ import com.yi.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ManagerServiceImpl implements ManagerService {
     @Autowired
@@ -39,6 +41,11 @@ public class ManagerServiceImpl implements ManagerService {
     @Override
     public int updateByPrimaryKey(TbManager record) {
         return mapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<TbManager> selectAll() {
+        return mapper.selectAll();
     }
 
     @Override
