@@ -46,6 +46,6 @@ public class KindInfoServiceImpl implements KindInfoService {
     public List<Integer> selectHigher(Integer level){return kindInfoMapper.selectHigher(level);}
 
     @Override
-    public List<Map<String, Object>> selectAll(int higherId){return kindInfoMapper.selectAll(higherId);}
+    public List<KindInfo> selectByHigherId(Integer higherId);{return kindInfoMapper.selectByHigherId(higherId);}
 
 }

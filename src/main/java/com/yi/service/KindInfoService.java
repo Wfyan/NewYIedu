@@ -20,6 +20,6 @@ public interface KindInfoService {
 
     List<Integer> selectHigher(Integer level);
 
-    List<Map<String, Object>> selectAll(int higherId);
+    List<KindInfo> selectByHigherId(Integer higherId);
 
 }

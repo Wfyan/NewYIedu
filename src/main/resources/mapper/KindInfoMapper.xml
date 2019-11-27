@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
+<mapper namespace="com.yi.inter.KindInfoMapper" >
+=======
 <mapper namespace="com.yi.mapper.KindInfoMapper" >
+>>>>>>> ef0ae44e8159c38773805fbcabcf052098c8ca5f
   <resultMap id="BaseResultMap" type="com.yi.entity.KindInfo" >
     <id column="kid" property="kid" jdbcType="INTEGER" />
     <result column="kind_name" property="kindName" jdbcType="VARCHAR" />
@@ -11,7 +15,11 @@
     kid, kind_name, higher_id, level
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+<<<<<<< HEAD
+    select 
+=======
     select
+>>>>>>> ef0ae44e8159c38773805fbcabcf052098c8ca5f
     <include refid="Base_Column_List" />
     from kind_info
     where kid = #{kid,jdbcType=INTEGER}
@@ -21,8 +29,14 @@
     where kid = #{kid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.yi.entity.KindInfo" >
+<<<<<<< HEAD
+    insert into kind_info (kid, kind_name, higher_id, 
+      level)
+    values (#{kid,jdbcType=INTEGER}, #{kindName,jdbcType=VARCHAR}, #{higherId,jdbcType=INTEGER}, 
+=======
     insert into kind_info ( kind_name, higher_id, level)
     values ( #{kindName,jdbcType=VARCHAR}, #{higherId,jdbcType=INTEGER},
+>>>>>>> ef0ae44e8159c38773805fbcabcf052098c8ca5f
       #{level,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.yi.entity.KindInfo" >
@@ -78,15 +92,18 @@
       level = #{level,jdbcType=INTEGER}
     where kid = #{kid,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
+=======
   <select id="selectHigher" resultMap="BaseResultMap" >
     select kind_name,kid
     from kind_info
     where level = #{level,jdbcType=INTEGER}
   </select>
-  <select id="" resultMap="BaseResultMap" >
+  <select id="selectByName" resultMap="BaseResultMap" >
     select
     <include refid="Base_Column_List" />
     from kind_info
     where kind_name = #{kindName,jdbcType=VARCHAR}
   </select>
+>>>>>>> ef0ae44e8159c38773805fbcabcf052098c8ca5f
 </mapper>

@@ -19,7 +19,7 @@ public class KindInfoController {
     @ResponseBody
     @RequestMapping("/addKindInfo")
     public JSONObject addKindInfo(@RequestBody  JSONObject json ){
-        JSONObject jsResult =new JSONObject();
+        JSONObject jsResult = new JSONObject();
         try{
             String kindName=json.getString("kindName");
             Integer higherId=json.getInteger("higherId");
@@ -33,6 +33,7 @@ public class KindInfoController {
                 jsResult.put("errCode","-2");
                 jsResult.put("errMsg","添加类别失败");
             }
+
         }catch (Exception e ){
             jsResult.put("errCode","-1");
             jsResult.put("errMsg","添加类别出现异常，请调整参数后重试");
