@@ -11,7 +11,7 @@
     kid, kind_name, higher_id, level
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from kind_info
     where kid = #{kid,jdbcType=INTEGER}
@@ -21,9 +21,8 @@
     where kid = #{kid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.yi.entity.KindInfo" >
-    insert into kind_info (kid, kind_name, higher_id, 
-      level)
-    values (#{kid,jdbcType=INTEGER}, #{kindName,jdbcType=VARCHAR}, #{higherId,jdbcType=INTEGER}, 
+    insert into kind_info ( kind_name, higher_id, level)
+    values ( #{kindName,jdbcType=VARCHAR}, #{higherId,jdbcType=INTEGER},
       #{level,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.yi.entity.KindInfo" >
@@ -79,4 +78,15 @@
       level = #{level,jdbcType=INTEGER}
     where kid = #{kid,jdbcType=INTEGER}
   </update>
+  <select id="selectHigher" resultMap="BaseResultMap" >
+    select kind_name,kid
+    from kind_info
+    where level = #{level,jdbcType=INTEGER}
+  </select>
+  <select id="" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from kind_info
+    where kind_name = #{kindName,jdbcType=VARCHAR}
+  </select>
 </mapper>
