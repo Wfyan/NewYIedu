@@ -1,14 +1,14 @@
-package com.yi.mapper;
+package com.yi.service;
 
 import com.yi.entity.KindInfo;
 
 import java.util.List;
 import java.util.Map;
 
-public interface KindInfoMapper {
+public interface KindInfoService {
     int deleteByPrimaryKey(Integer kid);
 
-    int insert(KindInfo record);
+    int insert(String kindName, Integer higherId, Integer level);
 
     int insertSelective(KindInfo record);
 
