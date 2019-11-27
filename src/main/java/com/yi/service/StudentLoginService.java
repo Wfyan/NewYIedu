@@ -1,0 +1,28 @@
+package com.yi.service;
+
+import com.yi.util.Result;
+
+public interface StudentLoginService {
+
+    /**
+     * 根据账号密码获取信息
+     * @param name
+     * @param password
+     * @return
+     */
+    Result goLoginByName(String name, String password);
+
+    /**
+     * 根据账号密码获取信息
+     * @param phone
+     * @param password
+     * @return
+     */
+    Result goLoginByPhone(String phone, String password);
+
+    /**
+     * 退出登录
+     */
+    Result logout();
+
+}

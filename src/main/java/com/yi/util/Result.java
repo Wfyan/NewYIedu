@@ -114,7 +114,7 @@ public class Result {
      * @return
      */
     public static Result success(Object data) {
-        return new Result(1224, "success", data, 0);
+        return new Result(1224, "success", data, 1);
     }
 
     /**

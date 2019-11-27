@@ -25,7 +25,7 @@ public class ManagerServiceImpl implements ManagerService {
 
     @Override
     public int insertSelective(TbManager record) {
-        return 0;
+        return mapper.insertSelective(record);
     }
 
     @Override

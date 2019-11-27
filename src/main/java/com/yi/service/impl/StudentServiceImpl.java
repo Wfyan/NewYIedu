@@ -6,6 +6,8 @@ import com.yi.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
@@ -13,17 +15,17 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public int deleteByPrimaryKey(String stuid) {
-        return 0;
+        return mapper.deleteByPrimaryKey(stuid);
     }
 
     @Override
     public int insert(TbStudent record) {
-        return 0;
+        return mapper.insert(record);
     }
 
     @Override
     public int insertSelective(TbStudent record) {
-        return 0;
+        return mapper.insertSelective(record);
     }
 
     @Override
@@ -33,11 +35,36 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public int updateByPrimaryKeySelective(TbStudent record) {
-        return 0;
+        return mapper.updateByPrimaryKeySelective(record);
     }
 
     @Override
     public int updateByPrimaryKey(TbStudent record) {
-        return 0;
+        return mapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<TbStudent> selectAll() {
+        return mapper.selectAll();
+    }
+
+    @Override
+    public List<TbStudent> getByName(String stuname) {
+        return mapper.getByName(stuname);
+    }
+
+    @Override
+    public TbStudent goLoginByPhone(String phone, String stupassword) {
+        return mapper.goLoginByPhone(phone,stupassword);
+    }
+
+    @Override
+    public TbStudent goLoginByName(String stuname, String stupassword) {
+        return mapper.goLoginByName(stuname,stupassword);
+    }
+
+    @Override
+    public TbStudent selectByPhone(String phone) {
+        return mapper.selectByPhone(phone);
     }
 }
