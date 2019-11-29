@@ -22,4 +22,6 @@ public interface KindInfoService {
 
     KindInfo selectByName(String kindName);
 
+    List<KindInfo> selectAll();
+
 }

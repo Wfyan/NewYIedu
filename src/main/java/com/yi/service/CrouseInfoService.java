@@ -2,6 +2,8 @@ package com.yi.service;
 
 import com.yi.entity.CrouseInfo;
 
+import java.util.List;
+
 public interface CrouseInfoService {
     int deleteByPrimaryKey(Integer cid);
 
@@ -16,4 +18,7 @@ public interface CrouseInfoService {
     int updateByPrimaryKey(CrouseInfo record);
 
     CrouseInfo selectByName(String cname);
+
+    List<CrouseInfo> selectAll();
+
 }

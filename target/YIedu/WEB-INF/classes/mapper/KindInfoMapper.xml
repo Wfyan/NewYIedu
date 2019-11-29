@@ -75,7 +75,7 @@
     </set>
     where kid = #{kid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yi.criteria.KindInfoQueryCriteria" >
+  <update id="updateByPrimaryKey" parameterType="com.yi.dto.KindInfoQueryCriteria" >
     update kind_info
     set kind_name = #{kindName,jdbcType=VARCHAR},
       higher_id = #{higherId,jdbcType=INTEGER},
@@ -94,5 +94,10 @@
     <include refid="Base_Column_List" />
     from kind_info
     where kind_name = #{kind_name,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from kind_info
   </select>
 </mapper>

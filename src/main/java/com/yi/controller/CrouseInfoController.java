@@ -1,7 +1,8 @@
 package com.yi.controller;
 
-import com.yi.dto.KindInfoQueryCriteria;
+import com.github.pagehelper.PageHelper;
 import com.yi.entity.CrouseInfo;
+import com.yi.entity.KindInfo;
 import com.yi.service.CrouseInfoService;
 import com.yi.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,10 +49,20 @@ public class CrouseInfoController {
         return record == null ? new Result().error("无数据"):new Result().success(record);
     }
 
-    @PostMapping("updateByPrimaryKey")
-    public Result updateByPrimaryKey(@RequestBody KindInfoQueryCriteria record){
+    @PostMapping("/updateByPrimaryKeySelective")
+    public Result updateByPrimaryKeySelective(@RequestBody CrouseInfo record){
         try {
-            return  crouseInfoService.updateByPrimaryKey(record) > 0 ?  new Result().successMessage("修改成功"):new Result("修改失败");
+            return crouseInfoService.updateByPrimaryKeySelective(record) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+        }catch (Exception e){
+            e.printStackTrace();
+            return new Result().error("修改异常");
+        }
+    }
+
+    @PostMapping("/updateByPrimaryKey")
+    public Result updateByPrimaryKey(@RequestBody CrouseInfo record){
+        try {
+            return crouseInfoService.updateByPrimaryKey(record) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
         }catch (Exception e){
             return new Result().error("修改异常");
         }
@@ -66,5 +77,22 @@ public class CrouseInfoController {
     public Result selectByName(String cname){
         CrouseInfo record = crouseInfoService.selectByName(cname);
         return record == null ? new Result().error("无数据"):new Result().success(record);
+    }
+
+    /**
+     * 查询所有课程
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @GetMapping("/selectAll")
+    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
+        List<CrouseInfo> list =crouseInfoService.selectAll();
+        if(list == null){
+            return new Result().successMessage("无数据");
+        }else{
+            return new Result().success(list,list.size());
+        }
     }
 }

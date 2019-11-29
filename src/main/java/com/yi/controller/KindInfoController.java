@@ -1,5 +1,6 @@
 package com.yi.controller;
 
+import com.github.pagehelper.PageHelper;
 import com.yi.dto.KindInfoQueryCriteria;
 import com.yi.entity.KindInfo;
 import com.yi.service.KindInfoService;
@@ -56,7 +57,6 @@ public class KindInfoController {
     @PostMapping("updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody KindInfoQueryCriteria record){
         try {
-
             return  kindInfoService.updateByPrimaryKey(record) > 0 ?  new Result().successMessage("修改成功"):new Result("修改失败");
         }catch (Exception e){
             return new Result().error("修改异常");
@@ -102,6 +102,23 @@ public class KindInfoController {
     public Result selectByName(String kindName){
             KindInfo kindInfo = kindInfoService.selectByName(kindName);
             return kindInfo == null ? new Result().error("无数据"):new Result().success(kindInfo);
+    }
+
+    /**
+     * 查询所有课程类别
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @GetMapping("/selectAll")
+    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
+        List<KindInfo> list =kindInfoService.selectAll();
+        if(list == null){
+            return new Result().successMessage("无数据");
+        }else{
+            return new Result().success(list,list.size());
+        }
     }
 
 //    public static void main(String[] args) {

@@ -2,6 +2,8 @@ package com.yi.mapper;
 
 import com.yi.entity.CrouseInfo;
 
+import java.util.List;
+
 public interface CrouseInfoMapper {
     int deleteByPrimaryKey(Integer cid);
 
@@ -16,4 +18,7 @@ public interface CrouseInfoMapper {
     int updateByPrimaryKey(CrouseInfo record);
 
     CrouseInfo selectByName(String cname);
+
+    List<CrouseInfo> selectAll();
+
 }

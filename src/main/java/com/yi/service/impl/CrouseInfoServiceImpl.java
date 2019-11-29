@@ -5,7 +5,11 @@ import com.yi.entity.KindInfo;
 import com.yi.mapper.CrouseInfoMapper;
 import com.yi.service.CrouseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+@Service
 public class CrouseInfoServiceImpl implements CrouseInfoService {
 
     @Autowired
@@ -43,4 +47,8 @@ public class CrouseInfoServiceImpl implements CrouseInfoService {
 
     @Override
     public CrouseInfo selectByName(String cname){return crouseInfoMapper.selectByName(cname);}
+
+    @Override
+    public List<CrouseInfo> selectAll(){return crouseInfoMapper.selectAll();}
+
 }

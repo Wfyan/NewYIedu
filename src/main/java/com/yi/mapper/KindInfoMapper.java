@@ -23,6 +23,6 @@ public interface KindInfoMapper {
 
     KindInfo selectByName(String name);
 
-    KindInfo selectByHigherId(Integer higherId);
+    List<KindInfo> selectAll();
 
 }
