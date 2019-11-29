@@ -23,6 +23,11 @@
      -->
     <mvc:default-servlet-handler/>
 
+    <!--重要！将你的SwaggerConfig配置类注入-->
+    <bean class="com.yi.SwaggerConfig"/>
+    <!--重要！配置swagger资源不被拦截-->
+    <mvc:resources mapping="swagger/**" location="/WEB-INF/dist/" />
+
     <!-- 3.配置jsp 显示ViewResolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
