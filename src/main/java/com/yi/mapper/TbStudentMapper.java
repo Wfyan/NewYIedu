@@ -29,19 +29,13 @@ public interface TbStudentMapper {
      */
     List<TbStudent> getByName(@Param("stuname") String stuname);
     /**
-     * 根据账号密码获取信息（用于登录）
+     * 根据手机号密码获取信息（用于登录）
      * @param phone
      * @param stupassword
      * @return
      */
     TbStudent goLoginByPhone(@Param("phone") String phone, @Param("stupassword") String stupassword);
-    /**
-     * 根据账号密码获取信息（用于登录）
-     * @param stuname
-     * @param stupassword
-     * @return
-     */
-    TbStudent goLoginByName(@Param("stuname") String stuname, @Param("stupassword") String stupassword);
+
     /**
      * 根据手机号码获取信息
      * @param phone

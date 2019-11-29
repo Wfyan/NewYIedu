@@ -6,14 +6,6 @@ public interface StudentLoginService {
 
     /**
      * 根据账号密码获取信息
-     * @param name
-     * @param password
-     * @return
-     */
-    Result goLoginByName(String name, String password);
-
-    /**
-     * 根据账号密码获取信息
      * @param phone
      * @param password
      * @return

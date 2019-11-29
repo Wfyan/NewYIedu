@@ -220,4 +220,20 @@
       state = #{state,jdbcType=INTEGER}
     where tecid = #{tecid,jdbcType=VARCHAR}
   </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_teacher
+  </select>
+
+  <select id="getByName" resultMap="BaseResultMap">
+    select * from tb_teacher where tecname = #{tecname}
+  </select>
+  <select id="goLoginByPhone" resultMap="BaseResultMap">
+    select * from tb_teacher where phone = #{ phone } and tecpassword = #{tecpassword}
+  </select>
+  <select id="selectByPhone" resultMap="BaseResultMap">
+    select * from tb_teacher where phone = #{ phone }
+  </select>
 </mapper>
