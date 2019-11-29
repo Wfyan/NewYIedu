@@ -1,8 +1,8 @@
-package com.yi.mapper;
+package com.yi.service;
 
 import com.yi.entity.CrouseInfo;
 
-public interface CrouseInfoMapper {
+public interface CrouseInfoService {
     int deleteByPrimaryKey(Integer cid);
 
     int insert(CrouseInfo record);
