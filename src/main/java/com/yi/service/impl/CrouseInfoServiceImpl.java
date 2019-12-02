@@ -42,11 +42,23 @@ public class CrouseInfoServiceImpl implements CrouseInfoService {
 
     @Override
     public int updateByPrimaryKey(CrouseInfo record) {
-        return updateByPrimaryKey(record);
+        return crouseInfoMapper.updateByPrimaryKey(record);
     }
 
     @Override
-    public CrouseInfo selectByName(String cname){return crouseInfoMapper.selectByName(cname);}
+    public List<CrouseInfo> selectByKid(Integer kid) {
+        return crouseInfoMapper.selectByKid(kid);
+    }
+
+    @Override
+    public CrouseInfo selectByName(String cname) {
+        return crouseInfoMapper.selectByName(cname);
+    }
+
+    @Override
+    public List<CrouseInfo> fuzzyQueryByName(String cname) {
+        return crouseInfoMapper.fuzzyQueryByName(cname);
+    }
 
     @Override
     public List<CrouseInfo> selectAll(){return crouseInfoMapper.selectAll();}

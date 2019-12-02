@@ -17,7 +17,11 @@ public interface CrouseInfoService {
 
     int updateByPrimaryKey(CrouseInfo record);
 
+    List<CrouseInfo> selectByKid(Integer kid);
+
     CrouseInfo selectByName(String cname);
+
+    List<CrouseInfo> fuzzyQueryByName(String cname);    //模糊查询
 
     List<CrouseInfo> selectAll();
 

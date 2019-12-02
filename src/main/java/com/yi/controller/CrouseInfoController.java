@@ -69,14 +69,25 @@ public class CrouseInfoController {
     }
 
     /**
-     * 根据课程名称查询课程
+     * 根据课程类别查询课程信息
+     * @param kid
+     * @return
+     */
+    @GetMapping("/selectByKid")
+    public Result selectByKid(Integer kid){
+        List<CrouseInfo> list = crouseInfoService.selectByKid(kid);
+        return list.size() == 0 ? new Result().successMessage("无数据") : new Result().success(list, list.size());
+    }
+
+    /**
+     * 模糊查询
      * @param cname
      * @return
      */
-    @GetMapping("/selectByName")
-    public Result selectByName(String cname){
-        CrouseInfo record = crouseInfoService.selectByName(cname);
-        return record == null ? new Result().error("无数据"):new Result().success(record);
+    @GetMapping("/fuzzyQueryByName")
+    public Result fuzzyQueryByName(String cname){
+        List<CrouseInfo> list = crouseInfoService.fuzzyQueryByName(cname);
+        return list.size() == 0 ? new Result().successMessage("无数据"):new Result().success(list, list.size());
     }
 
     /**
