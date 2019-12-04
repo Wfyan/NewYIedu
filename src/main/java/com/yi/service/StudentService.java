@@ -29,19 +29,12 @@ public interface StudentService {
      */
     List<TbStudent> getByName(String stuname);
     /**
-     * 根据账号密码获取信息（用于登录）
+     * 根据手机号密码获取信息（用于登录）
      * @param phone
      * @param stupassword
      * @return
      */
     TbStudent goLoginByPhone(String phone, String stupassword);
-    /**
-     * 根据账号密码获取信息（用于登录）
-     * @param stuname
-     * @param stupassword
-     * @return
-     */
-    TbStudent goLoginByName(String stuname, String stupassword);
     /**
      * 根据手机号码获取信息
      * @param phone

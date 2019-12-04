@@ -241,9 +241,12 @@
   <select id="getByName" resultMap="BaseResultMap">
     select * from tb_student where stuname = #{stuname}
   </select>
+<<<<<<< HEAD
   <select id="goLoginByName" resultMap="BaseResultMap">
     select * from tb_student where stuname = #{ stuname } and stupassword = #{stupassword}
   </select>
+=======
+>>>>>>> master
   <select id="goLoginByPhone" resultMap="BaseResultMap">
     select * from tb_student where phone = #{ phone } and stupassword = #{stupassword}
   </select>

@@ -1,6 +1,9 @@
 package com.yi.mapper;
 
 import com.yi.entity.RolePermission;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface RolePermissionMapper {
     int deleteByPrimaryKey(Integer rolePermissionId);
@@ -14,4 +17,14 @@ public interface RolePermissionMapper {
     int updateByPrimaryKeySelective(RolePermission record);
 
     int updateByPrimaryKey(RolePermission record);
+    /**
+     * 查询所有数据
+     * @return
+     */
+    List<RolePermission> selectAll();
+    /**
+     * 根据角色ID查询所有数据
+     * @return
+     */
+    List<RolePermission> selectByRoleId(@Param("roleId") Integer roleId);
 }

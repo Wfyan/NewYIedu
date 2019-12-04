@@ -59,11 +59,6 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public TbStudent goLoginByName(String stuname, String stupassword) {
-        return mapper.goLoginByName(stuname,stupassword);
-    }
-
-    @Override
     public TbStudent selectByPhone(String phone) {
         return mapper.selectByPhone(phone);
     }

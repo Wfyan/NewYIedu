@@ -34,7 +34,8 @@ public class ManagerLoginServiceImpl implements ManagerLoginService {
     private static LoginOk loginOk(TbManager manager){
         LoginOk loginOk = new LoginOk();
         loginOk.setName(manager.getName());
-        loginOk.setId(manager.getId());
+        loginOk.setId(manager.getId().toString());
+        loginOk.setRoleId(manager.getRoleId());
         return loginOk;
     }
 
