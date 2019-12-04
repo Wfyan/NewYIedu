@@ -13,6 +13,8 @@ public class Permission {
 
     private String dirName;
 
+    private Integer roleandpermission;
+
     public Integer getPermissionId() {
         return permissionId;
     }
@@ -59,5 +61,13 @@ public class Permission {
 
     public void setDirName(String dirName) {
         this.dirName = dirName == null ? null : dirName.trim();
+    }
+
+    public Integer getRoleandpermission() {
+        return roleandpermission;
+    }
+
+    public void setRoleandpermission(Integer roleandpermission) {
+        this.roleandpermission = roleandpermission;
     }
 }
