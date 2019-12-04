@@ -47,4 +47,9 @@ public class PermissionServiceImpl implements PermissionService {
     public List<Permission> selectAll() {
         return mapper.selectAll();
     }
+
+    @Override
+    public List<Permission> selectByLevel(Integer roleId) {
+        return mapper.selectByLevel(roleId);
+    }
 }

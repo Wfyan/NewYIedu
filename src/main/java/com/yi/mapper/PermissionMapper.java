@@ -1,6 +1,7 @@
 package com.yi.mapper;
 
 import com.yi.entity.Permission;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,4 +22,11 @@ public interface PermissionMapper {
      * @return
      */
     List<Permission> selectAll();
+
+    /**
+     * 根据角色ID查询相关权限
+     * @param roleId
+     * @return
+     */
+    List<Permission> selectByLevel(@Param("roleId") Integer roleId);
 }

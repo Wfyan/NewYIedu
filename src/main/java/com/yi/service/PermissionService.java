@@ -21,4 +21,10 @@ public interface PermissionService {
      * @return
      */
     List<Permission> selectAll();
+    /**
+     * 根据角色ID查询相关权限
+     * @param roleId
+     * @return
+     */
+    List<Permission> selectByLevel(Integer roleId);
 }

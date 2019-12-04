@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0a85300-8d4d-469d-a89e-252cc5f39660" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/OrderInfoController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/OrderInfoService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/OrderInfoServiceImpl.java" afterDir="false" />
@@ -82,6 +83,32 @@
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/OrderInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/TbStudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TbStudentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/VideoInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/VideoInfoMapper.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/dto/LoginOk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/dto/LoginOk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/entity/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/entity/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/PermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/PermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/dto/LoginOk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/dto/LoginOk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/entity/Permission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/entity/Permission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/PermissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/PermissionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/ManagerLoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/ManagerLoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/PermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/PermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/dto/LoginOk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/dto/LoginOk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/entity/Permission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/entity/Permission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/mapper/PermissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/mapper/PermissionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/impl/ManagerLoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/impl/ManagerLoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PermissionMapper.xml" afterDir="false" />
+>>>>>>> master
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,6 +123,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/OrderInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,13 +153,25 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="269">
               <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/dto/LoginOk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+>>>>>>> master
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VideoInfoMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -174,6 +214,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> master
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -226,6 +268,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbStudentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/StudentService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TbStudentMapper.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/StudentLoginService.java" />
@@ -259,6 +302,47 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/OrderInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/OrderInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/OrderInfoController.java" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbStudentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/entity/TbTeacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbTeacherMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/TbTeacherMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/TeacherService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/TeacherLoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext-web.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dist/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/RolesService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/RolesMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/RolesMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/RolesServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/RolePermissionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/RolePermissionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/RolesPermissionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/RolePermissionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/RolePermissionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/RolePermissionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/dto/LoginOk.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/entity/Permission.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/PermissionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/PermissionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentLoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerLoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherLoginServiceImpl.java" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -298,9 +382,15 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
+<<<<<<< HEAD
     <option name="x" value="445" />
     <option name="y" value="10" />
     <option name="width" value="700" />
+=======
+    <option name="x" value="447" />
+    <option name="y" value="12" />
+    <option name="width" value="697" />
+>>>>>>> master
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -361,6 +451,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="yi" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -371,6 +462,9 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="yi" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
             <path>
               <item name="NewYIedu" type="b2602c69:ProjectViewProjectNode" />
@@ -416,6 +510,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="NewYIedu" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewYIedu" type="462c0819:PsiDirectoryNode" />
@@ -439,6 +534,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> master
           </expand>
           <select />
         </subPane>
@@ -450,7 +547,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+>>>>>>> master
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -461,6 +562,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+<<<<<<< HEAD
       <recent name="com.yi.dto" />
       <recent name="com.yi.service" />
       <recent name="com.yi.service.impl" />
@@ -468,9 +570,19 @@
       <recent name="com.yi.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+=======
+      <recent name="com.yi.mapper" />
+      <recent name="com.yi.entity" />
+      <recent name="com.yi.controller" />
+      <recent name="com.yi.service.impl" />
+      <recent name="com.yi.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MyIDEA\YIedu\src\main\resources\mapper" />
+      <recent name="E:\MyIDEA\YIedu\src\main\webapp\WEB-INF" />
+>>>>>>> master
       <recent name="E:\MyIDEA\YIedu\src\main\test\com\yi\mapper" />
       <recent name="E:\MyIDEA\YIedu\src\main\resources" />
-      <recent name="E:\MyIDEA\YIedu\src\main\resources\mapper" />
       <recent name="E:\MyIDEA\YIedu\src\main\resources\conf" />
       <recent name="E:\MyIDEA\YIedu\src\main\resources\spring" />
     </key>
@@ -643,9 +755,27 @@
       <workItem from="1574750159295" duration="9366000" />
       <workItem from="1574771991210" duration="594000" />
       <workItem from="1574813564302" duration="5231000" />
+<<<<<<< HEAD
       <workItem from="1574986130894" duration="15333000" />
       <workItem from="1575015496184" duration="24029000" />
       <workItem from="1575426867333" duration="8282000" />
+=======
+      <workItem from="1574838581149" duration="1195000" />
+      <workItem from="1574847128426" duration="980000" />
+      <workItem from="1574861538140" duration="1919000" />
+      <workItem from="1574900378966" duration="2556000" />
+      <workItem from="1574942978624" duration="5146000" />
+      <workItem from="1574986805638" duration="9099000" />
+      <workItem from="1575013247752" duration="6541000" />
+      <workItem from="1575034003112" duration="665000" />
+      <workItem from="1575248580149" duration="950000" />
+      <workItem from="1575255361465" duration="1276000" />
+      <workItem from="1575268530034" duration="7871000" />
+      <workItem from="1575332759374" duration="1787000" />
+      <workItem from="1575362804972" duration="3529000" />
+      <workItem from="1575372399743" duration="3195000" />
+      <workItem from="1575420232240" duration="11756000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
@@ -682,6 +812,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="101831000" />
   </component>
   <component name="ToolWindowManager">
@@ -690,6 +821,16 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49823943" visible="true" weight="0.20375335" />
       <window_info id="Structure" order="1" sideWeight="0.50176054" side_tool="true" weight="0.25" />
+=======
+    <option name="totallyTimeSpent" value="94825000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7617108" visible="true" weight="0.23827533" />
+      <window_info id="Structure" order="1" sideWeight="0.2382892" side_tool="true" visible="true" weight="0.23827533" />
+>>>>>>> master
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -697,9 +838,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.388102" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32577905" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19508196" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.21147542" />
+>>>>>>> master
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -708,8 +855,13 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286119" />
+=======
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.28032786" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+>>>>>>> master
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -739,6 +891,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/StudentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -777,6 +930,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerLoginServiceImpl.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/TbStudentMapper.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
           <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
@@ -837,6 +993,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/dto/LoginOk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -852,12 +1009,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TbManagerMapper.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/ManagerLoginService.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="97" column="11" selection-start-line="93" selection-start-column="2" selection-end-line="97" selection-end-column="11" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/KindInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -879,6 +1040,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/KindInfoMapper.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dist/oauth2-redirect.html">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1919">
           <caret line="101" column="11" selection-start-line="97" selection-start-column="2" selection-end-line="101" selection-end-column="11" />
@@ -943,6 +1107,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/util/FileUploadTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2718">
@@ -954,6 +1119,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/entity/VideoInfo.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TbManagerMapper.xml">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="40" column="49" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="49" />
@@ -977,6 +1145,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/RolePermissionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -985,12 +1154,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/entity/TbManager.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -999,6 +1172,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/TbManagerMapper.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
@@ -1019,6 +1195,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/entity/OrderInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-38">
@@ -1027,6 +1204,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/CrouseInfoService.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/RolesMapper.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
@@ -1056,6 +1236,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1067,6 +1248,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/CrouseInfoController.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/RolePermissionMapper.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1691">
           <caret line="104" column="22" lean-forward="true" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
@@ -1086,26 +1270,48 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/OrderInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" selection-start-line="19" selection-end-line="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="61" column="104" selection-start-line="61" selection-start-column="85" selection-end-line="61" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+>>>>>>> master
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/OrderInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="91" />
+>>>>>>> master
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/VideoInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -1114,10 +1320,23 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1264#1265#0" expanded="true" />
             <element signature="e#1326#1327#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/OrderInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="577">
@@ -1143,6 +1362,30 @@
             <element signature="e#721#722#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
             <element signature="e#1285#1286#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-768">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1222#1223#0" expanded="true" />
+            <element signature="e#1292#1293#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -1156,14 +1399,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/KindInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="639">
           <caret line="125" column="93" selection-start-line="125" selection-start-column="93" selection-end-line="125" selection-end-column="93" />
+=======
+        <state relative-caret-position="154">
+          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+>>>>>>> master
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/VideoInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1178,16 +1427,157 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/entity/PayInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/entity/Permission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="8" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/RolePermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/RolesServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/PermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="7" />
+>>>>>>> master
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VideoInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="120" column="35" lean-forward="true" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="65" column="36" lean-forward="true" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2728">
+          <caret line="124" column="40" lean-forward="true" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/PermissionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentLoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherLoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerLoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" selection-start-line="20" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/dto/LoginOk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+          </folding>
+>>>>>>> master
         </state>
       </provider>
     </entry>

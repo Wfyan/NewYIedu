@@ -1,6 +1,7 @@
 package com.yi.controller;
 
 import com.yi.service.ManagerLoginService;
+import com.yi.service.RolePermissionService;
 import com.yi.service.StudentLoginService;
 import com.yi.service.TeacherLoginService;
 import com.yi.util.Result;
