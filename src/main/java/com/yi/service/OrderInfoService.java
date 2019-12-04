@@ -1,10 +1,10 @@
-package com.yi.mapper;
+package com.yi.service;
 
 import com.yi.entity.OrderInfo;
 
 import java.util.List;
 
-public interface OrderInfoMapper {
+public interface OrderInfoService {
     int deleteByPrimaryKey(String orderId);
 
     int insert(OrderInfo record);
@@ -18,4 +18,5 @@ public interface OrderInfoMapper {
     int updateByPrimaryKey(OrderInfo record);
 
     List<OrderInfo> selectAll();
+
 }

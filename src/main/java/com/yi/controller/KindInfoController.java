@@ -5,6 +5,8 @@ import com.yi.dto.KindInfoQueryCriteria;
 import com.yi.entity.KindInfo;
 import com.yi.service.KindInfoService;
 import com.yi.util.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,10 +14,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("kindInfo")
+@Api(value = "课程类别业务接口")
 public class KindInfoController {
     @Autowired
     private KindInfoService kindInfoService;
 
+    @ApiOperation(value = "删除课程类别",httpMethod = "GET",response = Result.class,notes = "根据Id删除课程类别")
     @GetMapping("/deleteByPrimaryKey")
     public Result deleteByPrimaryKey(Integer id){
         return kindInfoService.deleteByPrimaryKey(id) > 0 ? new Result().successMessage("删除成功"):new Result().error("删除失败");
@@ -26,6 +30,7 @@ public class KindInfoController {
      * @param record
      * @return
      */
+    @ApiOperation(value = "添加课程类别",httpMethod = "POST",response = Result.class,notes = "添加课程类别")
     @PostMapping("/insert")
     public Result insertKindInfo(@RequestBody KindInfo record ){
         try{
@@ -48,12 +53,14 @@ public class KindInfoController {
         }
     }
 
+    @ApiOperation(value = "查询特定课程类别",httpMethod = "GET",response = Result.class,notes = "根据Id查询课程类别")
     @GetMapping("selectByPrimaryKey")
     public Result selectByPrimaryKey(Integer kid){
         KindInfo kindInfo = kindInfoService.selectByPrimaryKey(kid);
         return kindInfo == null ? new Result().error("无数据"):new Result().success(kindInfo);
     }
 
+    @ApiOperation(value = "更新课程类别",httpMethod = "POST",response = Result.class,notes = "根据Id更新课程类别")
     @PostMapping("updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody KindInfoQueryCriteria record){
         try {
@@ -68,8 +75,10 @@ public class KindInfoController {
      * @param level
      * @return
      */
+    @ApiOperation(value = "查询特定课程类别",httpMethod = "GET",response = Result.class,notes = "根据课程类别查询上一级课程类别")
     @GetMapping("/getHigherLevel")
-    public Result getHigherLevel(Integer level){
+    public Result getHigherLevel(Integer level, @RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
         List<KindInfo> list = kindInfoService.selectByLevel(level-1);
         if (list.size() == 0){
             return new Result().successMessage("无数据");
@@ -80,11 +89,14 @@ public class KindInfoController {
 
     /**
      * 根据课程类别查询下一级课程类别
-     * @param level
+     * @param pageNum
+     * @param pageSize
      * @return
      */
+    @ApiOperation(value = "查询特定课程类别",httpMethod = "GET",response = Result.class,notes = "根据课程类别查询下一级课程类别")
     @GetMapping("/selectNextLevel")
-    public Result selectNextLevel(Integer level){
+    public Result selectNextLevel(Integer level, @RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
         List<KindInfo> list = kindInfoService.selectByLevel(level+1);
         if (list.size() == 0){
             return new Result().successMessage("无数据");
@@ -98,6 +110,7 @@ public class KindInfoController {
      * @param kindName
      * @return
      */
+    @ApiOperation(value = "通过课程名称查询",httpMethod = "GET",response = Result.class,notes = "根据课程名称查询课程类别")
     @GetMapping("/selectByName")
     public Result selectByName(String kindName){
             KindInfo kindInfo = kindInfoService.selectByName(kindName);
@@ -110,6 +123,7 @@ public class KindInfoController {
      * @param pageSize
      * @return
      */
+    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有课程类别（接受页码和页码大小两个参数）")
     @GetMapping("/selectAll")
     public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
         PageHelper.startPage(pageNum,pageSize);

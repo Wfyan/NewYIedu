@@ -114,4 +114,15 @@
       vurl = #{vurl,jdbcType=VARCHAR}
     where vid = #{vid,jdbcType=INTEGER}
   </update>
+  <select id="fuzzyQueryByName" parameterType="java.lang.String" resultType="com.yi.entity.VideoInfo">
+    select
+    <include refid="Base_Column_List" />
+    from video_info
+    where title like "%"#{title}"%"
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from video_info
+  </select>
 </mapper>

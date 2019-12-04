@@ -4,6 +4,8 @@ import com.github.pagehelper.PageHelper;
 import com.yi.entity.CrouseInfo;
 import com.yi.service.CrouseInfoService;
 import com.yi.util.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +13,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("crouseInfo")
+@Api(value = "课程信息业务接口")
 public class CrouseInfoController {
 
     @Autowired
     private CrouseInfoService crouseInfoService;
 
+    @ApiOperation(value = "删除课程",httpMethod = "GET",response = Result.class,notes = "根据Id删除课程")
     @GetMapping("/deleteByPrimaryKey")
     public Result deleteByPrimaryKey(Integer cid){
         return crouseInfoService.deleteByPrimaryKey(cid) > 0 ? new Result().successMessage("删除成功"):new Result("删除失败");
@@ -26,6 +30,7 @@ public class CrouseInfoController {
      * @param record
      * @return
      */
+    @ApiOperation(value = "添加课程",httpMethod = "POST",response = Result.class,notes = "添加课程")
     @PostMapping("/insert")
     public Result insertCrouseInfo(@RequestBody CrouseInfo record ){
         try{
@@ -42,12 +47,14 @@ public class CrouseInfoController {
         }
     }
 
+    @ApiOperation(value = "查询特定课程",httpMethod = "GET",response = Result.class,notes = "根据Id查询课程")
     @GetMapping("selectByPrimaryKey")
     public Result selectByPrimaryKey(Integer cid){
         CrouseInfo record = crouseInfoService.selectByPrimaryKey(cid);
         return record == null ? new Result().error("无数据"):new Result().success(record);
     }
 
+    @ApiOperation(value = "更新课程信息",httpMethod = "POST",response = Result.class,notes = "根据Id选择更新课程信息")
     @PostMapping("/updateByPrimaryKeySelective")
     public Result updateByPrimaryKeySelective(@RequestBody CrouseInfo record){
         try {
@@ -58,6 +65,7 @@ public class CrouseInfoController {
         }
     }
 
+    @ApiOperation(value = "更新课程信息",httpMethod = "POST",response = Result.class,notes = "根据Id更新课程信息")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody CrouseInfo record){
         try {
@@ -72,6 +80,7 @@ public class CrouseInfoController {
      * @param kid
      * @return
      */
+    @ApiOperation(value = "查询特定课程",httpMethod = "GET",response = Result.class,notes = "根据课程类别查询课程")
     @GetMapping("/selectByKid")
     public Result selectByKid(Integer kid){
         List<CrouseInfo> list = crouseInfoService.selectByKid(kid);
@@ -83,6 +92,7 @@ public class CrouseInfoController {
      * @param cname
      * @return
      */
+    @ApiOperation(value = "通过课程名称模糊查询",httpMethod = "GET",response = Result.class,notes = "根据课程名称模糊查询课程")
     @GetMapping("/fuzzyQueryByName")
     public Result fuzzyQueryByName(String cname){
         List<CrouseInfo> list = crouseInfoService.fuzzyQueryByName(cname);
@@ -95,6 +105,7 @@ public class CrouseInfoController {
      * @param pageSize
      * @return
      */
+    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有课程（接受页码和页码大小两个参数）")
     @GetMapping("/selectAll")
     public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
         PageHelper.startPage(pageNum,pageSize);

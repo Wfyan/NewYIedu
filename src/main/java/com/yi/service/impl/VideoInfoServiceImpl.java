@@ -6,6 +6,8 @@ import com.yi.service.VideoInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class VideoInfoServiceImpl implements VideoInfoService {
 
@@ -40,5 +42,15 @@ public class VideoInfoServiceImpl implements VideoInfoService {
     @Override
     public int updateByPrimaryKey(VideoInfo record) {
         return videoInfoMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<VideoInfo> fuzzyQueryByName(String title) {
+        return videoInfoMapper.fuzzyQueryByName(title);
+    }
+
+    @Override
+    public List<VideoInfo> selectAll() {
+        return videoInfoMapper.selectAll();
     }
 }
