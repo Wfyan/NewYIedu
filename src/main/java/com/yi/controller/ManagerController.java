@@ -2,7 +2,7 @@ package com.yi.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.yi.entity.TbManager;
-import com.yi.service.impl.ManagerServiceImpl;
+import com.yi.service.ManagerService;
 import com.yi.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import java.util.List;
 public class ManagerController {
 
     @Autowired
-    private ManagerServiceImpl service;
+    private ManagerService service;
 
     @GetMapping("/deleteByPrimaryKey")
     public Result deleteByPrimaryKey(int id){

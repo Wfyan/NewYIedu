@@ -2,7 +2,7 @@ package com.yi.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.yi.entity.TbTeacher;
-import com.yi.service.impl.TeacherServiceImpl;
+import com.yi.service.TeacherService;
 import com.yi.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import java.util.List;
 public class TeacherController {
 
     @Autowired
-    private TeacherServiceImpl service;
+    private TeacherService service;
 
     @GetMapping("/deleteByPrimaryKey")
     public Result deleteByPrimaryKey(String id){

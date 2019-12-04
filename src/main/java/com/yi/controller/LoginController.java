@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/login")
-@Api(tags = "登录类")
+@Api(value = "登录类")
 public class LoginController {
 
     @Autowired
@@ -53,6 +53,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/tec/goLogin")
+    @ApiOperation(value = "教师登录",httpMethod = "GET",response = Result.class)
     public Result tecLogin(String phone, String password) {
         return teacherLoginService.goLoginByPhone(phone,password);
     }
