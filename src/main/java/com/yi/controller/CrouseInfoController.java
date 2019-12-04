@@ -2,7 +2,6 @@ package com.yi.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.yi.entity.CrouseInfo;
-import com.yi.entity.KindInfo;
 import com.yi.service.CrouseInfoService;
 import com.yi.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("CrouseInfo")
+@RequestMapping("crouseInfo")
 public class CrouseInfoController {
 
     @Autowired
@@ -62,7 +61,7 @@ public class CrouseInfoController {
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody CrouseInfo record){
         try {
-            return crouseInfoService.updateByPrimaryKey(record) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+            return crouseInfoService.updateByPrimaryKey(record) > 0 ? new Result().successMessage("修改成功"):new Result().error("修改失败");
         }catch (Exception e){
             return new Result().error("修改异常");
         }

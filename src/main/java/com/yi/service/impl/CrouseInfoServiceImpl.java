@@ -1,7 +1,6 @@
 package com.yi.service.impl;
 
 import com.yi.entity.CrouseInfo;
-import com.yi.entity.KindInfo;
 import com.yi.mapper.CrouseInfoMapper;
 import com.yi.service.CrouseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;

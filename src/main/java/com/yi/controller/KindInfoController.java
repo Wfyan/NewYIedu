@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("KindInfo")
+@RequestMapping("kindInfo")
 public class KindInfoController {
     @Autowired
     private KindInfoService kindInfoService;
 
     @GetMapping("/deleteByPrimaryKey")
     public Result deleteByPrimaryKey(Integer id){
-        return kindInfoService.deleteByPrimaryKey(id) > 0 ? new Result().successMessage("删除成功"):new Result("删除失败");
+        return kindInfoService.deleteByPrimaryKey(id) > 0 ? new Result().successMessage("删除成功"):new Result().error("删除失败");
     }
 
     /**
