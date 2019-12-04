@@ -4,6 +4,8 @@ import com.github.pagehelper.PageHelper;
 import com.yi.entity.TbTeacher;
 import com.yi.service.TeacherService;
 import com.yi.util.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +13,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/teacher")
+@Api(value = "教生管理业务接口")
 public class TeacherController {
 
     @Autowired
     private TeacherService service;
 
+    @ApiOperation(value = "删除",httpMethod = "GET",response = Result.class,notes = "根据ID删除")
     @GetMapping("/deleteByPrimaryKey")
     public Result deleteByPrimaryKey(String id){
         return service.deleteByPrimaryKey(id) > 0 ? new Result().successMessage("删除成功！"):new Result("删除失败！");
@@ -26,12 +30,14 @@ public class TeacherController {
      * @param teacher
      * @return
      */
+    @ApiOperation(value = "添加",httpMethod = "POST",response = Result.class,notes = "添加")
     @PostMapping("/insert")
     public Result insert(@RequestBody TbTeacher teacher){
         teacher.setTecid("1");
         return service.insertSelective(teacher) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
     }
 
+    @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")
     @GetMapping("/selectByPrimaryKey")
     public Result selectByPrimaryKey(String id){
         TbTeacher teacher = service.selectByPrimaryKey(id);
@@ -42,6 +48,7 @@ public class TeacherController {
         }
     }
 
+    @ApiOperation(value = "根据ID更新",httpMethod = "POST",response = Result.class,notes = "根据ID更新")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody TbTeacher teacher){
         return service.updateByPrimaryKey(teacher) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
@@ -53,6 +60,7 @@ public class TeacherController {
      * @param pageSize
      * @return
      */
+    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有（接受页码和页码大小两个参数）")
     @GetMapping("/selectAll")
     public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
         PageHelper.startPage(pageNum,pageSize);
@@ -64,6 +72,7 @@ public class TeacherController {
         }
     }
 
+    @ApiOperation(value = "根据手机号查询",httpMethod = "GET",response = Result.class,notes = "根据手机号查询特定学生")
     @GetMapping("/selectByPhone")
     public Result selectByPhone(String phone){
         TbTeacher teacher = service.selectByPhone(phone);
@@ -73,7 +82,5 @@ public class TeacherController {
             return new Result().success(teacher);
         }
     }
-
-
 
 }

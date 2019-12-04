@@ -28,7 +28,7 @@ public class LoginController {
      * @param password
      * @return
      */
-    @ApiOperation(value = "管理员登录",httpMethod = "GET",response = Result.class)
+    @ApiOperation(value = "管理员登录",httpMethod = "GET",response = Result.class,notes = "通过用户名和密码登录")
     @RequestMapping("/manager/goLogin")
     public Result authLogin(String name, String password) {
        return managerLoginService.goLogin(name,password);
@@ -41,7 +41,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/stu/goLogin")
-    @ApiOperation(value = "学生登录",httpMethod = "GET",response = Result.class)
+    @ApiOperation(value = "学生登录",httpMethod = "GET",response = Result.class,notes = "通过手机号和密码登录")
     public Result stuLogin(String phone, String password) {
         return studentLoginService.goLoginByPhone(phone,password);
     }
@@ -53,7 +53,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/tec/goLogin")
-    @ApiOperation(value = "教师登录",httpMethod = "GET",response = Result.class)
+    @ApiOperation(value = "教师登录",httpMethod = "GET",response = Result.class,notes = "通过手机号和密码登录")
     public Result tecLogin(String phone, String password) {
         return teacherLoginService.goLoginByPhone(phone,password);
     }
