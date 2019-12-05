@@ -65,7 +65,7 @@ public class StudentController {
     public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
         PageHelper.startPage(pageNum,pageSize);
         List<TbStudent> list =service.selectAll();
-        if(list == null){
+        if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
             return new Result().success(list,list.size());
