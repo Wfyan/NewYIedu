@@ -44,8 +44,13 @@ public class PermissionServiceImpl implements PermissionService {
     }
 
     @Override
-    public List<Permission> selectAll() {
-        return mapper.selectAll();
+    public List<Permission> selects(String title) {
+        return mapper.selects(title);
+    }
+
+    @Override
+    public int counts(String title) {
+        return mapper.counts(title);
     }
 
     @Override

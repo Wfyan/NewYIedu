@@ -60,25 +60,27 @@ public class CommentController {
      */
     @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有（接受页码和页码大小两个参数）")
     @GetMapping("/selectAll")
-    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize,
+                            @RequestParam(defaultValue = "0") int state){
         PageHelper.startPage(pageNum,pageSize);
-        List<TbComment> list =service.selectAll();
+        List<TbComment> list =service.selectAll(state);
         if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
-            return new Result().success(list,list.size());
+            return new Result().success(list,service.count(state));
         }
     }
 
     @ApiOperation(value = "组合查询",httpMethod = "GET",response = Result.class,
             notes = "根据课程ID/学生ID/时间组合查询")
     @GetMapping("/selectByMultiple")
-    public Result selectByMultiple(@RequestParam(defaultValue = "0") int cid, String stuid, String beforeDate, String afterDate){
-        List<TbComment> list = service.selectByMultiple(cid,stuid,beforeDate,afterDate);
+    public Result selectByMultiple(@RequestParam(defaultValue = "0") int cid, String stuid,
+                                   @RequestParam(defaultValue = "0") int state, String beforeDate, String afterDate){
+        List<TbComment> list = service.selectByMultiple(cid,stuid,state,beforeDate,afterDate);
         if (list.size() == 0){
             return new Result().successMessage("无数据");
         } else {
-            return new Result().success(list,list.size());
+            return new Result().success(list,service.counts(cid,stuid,state,beforeDate,afterDate));
         }
     }
 

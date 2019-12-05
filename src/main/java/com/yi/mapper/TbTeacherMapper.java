@@ -19,11 +19,6 @@ public interface TbTeacherMapper {
     int updateByPrimaryKey(TbTeacher record);
 
     /**
-     * 查询所有数据
-     * @return
-     */
-    List<TbTeacher> selectAll();
-    /**
      * 根据用户名获取信息
      * @param tecname
      * @return
@@ -43,4 +38,22 @@ public interface TbTeacherMapper {
      * @return
      */
     TbTeacher selectByPhone(@Param("phone") String phone);
+
+    /**
+     * 根据手机号/状态/时间组合查询 也用于查询所有
+     * @param state
+     * @param phone
+     * @param beforeDate
+     * @param afterDate
+     * @return
+     */
+    List<TbTeacher> selects(@Param("state") Integer state,@Param("phone") String phone,
+                            @Param("beforeDate") String beforeDate,@Param("afterDate") String afterDate);
+
+    /**
+     * 统计总数，用于分页
+     * @param state
+     * @return
+     */
+    int counts(@Param("state") Integer state,@Param("beforeDate") String beforeDate,@Param("afterDate") String afterDate);
 }

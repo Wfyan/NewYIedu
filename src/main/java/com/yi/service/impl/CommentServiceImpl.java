@@ -13,7 +13,6 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     private TbCommentMapper mapper;
 
-
     @Override
     public int deleteByPrimaryKey(Integer comId) {
         return mapper.deleteByPrimaryKey(comId);
@@ -45,12 +44,23 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public List<TbComment> selectAll() {
-        return mapper.selectAll();
+    public List<TbComment> selectAll(Integer state) {
+        return mapper.selectAll(state);
     }
 
     @Override
-    public List<TbComment> selectByMultiple(Integer cid, String stuid, String beforeDate, String afterDate) {
-        return mapper.selectByMultiple(cid,stuid,beforeDate,afterDate);
+    public int count(Integer state) {
+        return mapper.count(state);
     }
+
+    @Override
+    public List<TbComment> selectByMultiple(Integer cid, String stuid, Integer state, String beforeDate, String afterDate) {
+        return mapper.selectByMultiple(cid, stuid, state, beforeDate, afterDate);
+    }
+
+    @Override
+    public int counts(Integer cid, String stuid, Integer state, String beforeDate, String afterDate) {
+        return mapper.counts(cid, stuid, state, beforeDate, afterDate);
+    }
+
 }

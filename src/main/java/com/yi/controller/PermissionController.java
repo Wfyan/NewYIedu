@@ -49,7 +49,7 @@ public class PermissionController {
     @ApiOperation(value = "更新权限信息",httpMethod = "POST",response = Result.class,notes = "根据Id更新权限信息")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody Permission permission){
-        return service.updateByPrimaryKey(permission) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+        return service.updateByPrimaryKeySelective(permission) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
     /**
@@ -58,15 +58,17 @@ public class PermissionController {
      * @param pageSize
      * @return
      */
-    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有权限信息（接受页码和页码大小两个参数）")
-    @GetMapping("/selectAll")
-    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,
+            notes = "查询所有权限信息（接受页码和页码大小两个参数）根据名称模糊查询")
+    @GetMapping("/selects")
+    public Result selects(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize,
+                            String title){
         PageHelper.startPage(pageNum,pageSize);
-        List<Permission> list =service.selectAll();
+        List<Permission> list =service.selects(title);
         if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
-            return new Result().success(list,list.size());
+            return new Result().success(list,service.counts(title));
         }
     }
 

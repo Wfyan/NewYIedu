@@ -43,4 +43,9 @@ public interface TbManagerMapper {
      * @return
      */
     TbManager selectByPhone(@Param("phone") String phone);
+    /**
+     * 统计总数，用于分页
+     * @return
+     */
+    int counts();
 }

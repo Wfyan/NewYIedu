@@ -50,7 +50,7 @@ public class ManagerController {
     @ApiOperation(value = "更新管理员信息",httpMethod = "POST",response = Result.class,notes = "根据Id更新管理员信息")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody TbManager manager){
-        return service.updateByPrimaryKey(manager) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+        return service.updateByPrimaryKeySelective(manager) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
     /**
@@ -67,7 +67,7 @@ public class ManagerController {
         if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
-            return new Result().success(list,list.size());
+            return new Result().success(list,service.counts());
         }
     }
 
