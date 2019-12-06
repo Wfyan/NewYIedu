@@ -90,14 +90,16 @@ public class OrderInfoController {
         }
     }
 
-    @ApiOperation(value = "多条件查询",httpMethod = "GET",response = Result.class,notes = "多条件查询订单（接受页码和页码大小两个参数）")
+    @ApiOperation(value = "多条件查询",httpMethod = "GET",response = Result.class,
+            notes = "根据课程名称/价格/支付状态/时间查询订单（接受页码和页码大小两个参数）")
     @GetMapping("/multiCriteriaQuery")
-    public Result multiCriteriaQuery(String orderId, String stuid, Integer cid, Double price, Integer onpay, Date addtime){
-        List<OrderInfo> list = orderInfoService.multiCriteriaQuery(orderId, stuid, cid, price, onpay, addtime);
+    public Result multiCriteriaQuery(String cname, Double price, Integer onpay,
+                                     String beforeDate, String afterDate, String tecname){
+        List<OrderInfo> list = orderInfoService.multiCriteriaQuery(cname, price, onpay, beforeDate, afterDate, tecname);
         if (list.size() == 0){
             return new Result().successMessage("无数据");
         } else {
-            return new Result().success(list,list.size());
+            return new Result().success(list,orderInfoService.counts(cname, price, onpay, beforeDate, afterDate, tecname));
         }
     }
 }

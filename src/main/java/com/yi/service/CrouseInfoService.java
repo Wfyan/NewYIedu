@@ -1,6 +1,8 @@
 package com.yi.service;
 
 import com.yi.entity.CrouseInfo;
+import com.yi.entity.OrderInfo;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -25,4 +27,13 @@ public interface CrouseInfoService {
 
     List<CrouseInfo> selectAll();
 
+    int count();
+
+    List<CrouseInfo> multiCriteriaQuery(String kindName, String cname, String beforeDate,
+                                         String afterDate, Double price, String tecname, String phone);
+
+    int counts(String kindName, String cname, String beforeDate, String afterDate, Double price,
+               String tecname, String phone);
+
+    List<CrouseInfo> selectByTecname(String tecname);
 }

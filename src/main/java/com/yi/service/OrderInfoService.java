@@ -20,7 +20,10 @@ public interface OrderInfoService {
 
     List<OrderInfo> selectAll();
 
-    List<OrderInfo> multiCriteriaQuery(String orderId, String stuid, Integer cid, Double price, Integer onpay, Date addtime);
+    List<OrderInfo> multiCriteriaQuery(String cname, Double price, Integer onpay,
+                                       String beforeDate, String afterDate, String tecname);
 
     int count();
+
+    int counts(String cname, Double price, Integer onpay, String beforeDate, String afterDate, String tecname);
 }

@@ -50,12 +50,18 @@ public class OrderInfoServiceImpl implements OrderInfoService {
     }
 
     @Override
-    public List<OrderInfo> multiCriteriaQuery(String orderId, String stuid, Integer cid, Double price, Integer onpay, Date addtime) {
-        return orderInfoMapper.multiCriteriaQuery(orderId,stuid, cid, price, onpay, addtime);
+    public List<OrderInfo> multiCriteriaQuery(String cname, Double price, Integer onpay,
+                                              String beforeDate, String afterDate, String tecname) {
+        return orderInfoMapper.multiCriteriaQuery(cname, price, onpay, beforeDate, afterDate, tecname);
     }
 
     @Override
     public int count() {
         return orderInfoMapper.count();
+    }
+
+    @Override
+    public int counts(String cname, Double price, Integer onpay, String beforeDate, String afterDate, String tecname) {
+        return orderInfoMapper.counts(cname, price, onpay, beforeDate, afterDate, tecname);
     }
 }

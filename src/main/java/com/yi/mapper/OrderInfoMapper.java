@@ -21,8 +21,13 @@ public interface OrderInfoMapper {
 
     List<OrderInfo> selectAll();
 
-    List<OrderInfo> multiCriteriaQuery(@Param("orderId")String orderId, @Param("stuid")String stuid, @Param("cid")Integer cid,
-                                       @Param("price")Double price, @Param("onpay")Integer onpay, @Param("addtime")Date addtime);
+    List<OrderInfo> multiCriteriaQuery(@Param("cname")String cname, @Param("price")Double price,
+                                       @Param("onpay")Integer onpay, @Param("beforeDate") String beforeDate,
+                                       @Param("afterDate") String afterDate, @Param("tecname") String tecname);
 
     int count();
+
+    int counts(@Param("cname")String cname, @Param("price")Double price,
+               @Param("onpay")Integer onpay, @Param("beforeDate") String beforeDate,
+               @Param("afterDate") String afterDate, @Param("tecname") String tecname);
 }

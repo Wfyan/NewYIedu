@@ -62,4 +62,26 @@ public class CrouseInfoServiceImpl implements CrouseInfoService {
     @Override
     public List<CrouseInfo> selectAll(){return crouseInfoMapper.selectAll();}
 
+    @Override
+    public int count() {
+        return crouseInfoMapper.count();
+    }
+
+    @Override
+    public List<CrouseInfo> multiCriteriaQuery(String kindName, String cname, String beforeDate,
+                                               String afterDate, Double price, String tecname, String phone) {
+        return crouseInfoMapper.multiCriteriaQuery(kindName, cname, beforeDate, afterDate, price, tecname, phone);
+    }
+
+    @Override
+    public int counts(String kindName, String cname, String beforeDate,
+                      String afterDate, Double price, String tecname, String phone) {
+        return crouseInfoMapper.counts(kindName, cname, beforeDate, afterDate, price, tecname, phone);
+    }
+
+    @Override
+    public List<CrouseInfo> selectByTecname(String tecname) {
+        return crouseInfoMapper.selectByTecname(tecname);
+    }
+
 }

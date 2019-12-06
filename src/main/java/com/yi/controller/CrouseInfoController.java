@@ -113,7 +113,27 @@ public class CrouseInfoController {
         if(list == null){
             return new Result().successMessage("无数据");
         }else{
-            return new Result().success(list,list.size());
+            return new Result().success(list,crouseInfoService.count());
         }
+    }
+
+    @ApiOperation(value = "多条件查询",httpMethod = "GET",response = Result.class,
+            notes = "根据课程类别/课程名称/时间/价格/教师名称/学生手机号查询课程（接受页码和页码大小两个参数）")
+    @GetMapping("/multiCriteriaQuery")
+    public Result multiCriteriaQuery(String kindName, String cname, String beforeDate,
+                                     String afterDate, Double price, String tecname, String phone){
+        List<CrouseInfo> list = crouseInfoService.multiCriteriaQuery(kindName, cname, beforeDate, afterDate, price, tecname, phone);
+        if (list.size() == 0){
+            return new Result().successMessage("无数据");
+        } else {
+            return new Result().success(list,crouseInfoService.counts(kindName, cname, beforeDate, afterDate, price, tecname, phone));
+        }
+    }
+
+    @ApiOperation(value = "查询特定课程",httpMethod = "GET",response = Result.class,notes = "根据教师名称查询课程")
+    @GetMapping("/selectByTecname")
+    public Result selectByTecname(String tecname){
+        List<CrouseInfo> list = crouseInfoService.selectByTecname(tecname);
+        return list.size() == 0 ? new Result().successMessage("无数据") : new Result().success(list, list.size());
     }
 }
