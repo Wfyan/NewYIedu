@@ -184,7 +184,8 @@
     select
     <include refid="Base_Column_List" />
     from crouse_info
-    where cname like "%"#{cname}"%"
+    where cname like CONCAT(CONCAT('%',#{cname},'%'))
+    ORDER BY cid
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
     select

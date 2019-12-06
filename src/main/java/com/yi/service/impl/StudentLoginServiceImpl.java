@@ -1,20 +1,10 @@
 package com.yi.service.impl;
 
 import com.yi.dto.LoginOk;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import com.yi.entity.TbManager;
-import com.yi.mapper.TbManagerMapper;
-import com.yi.mapper.TbStudentMapper;
-import com.yi.service.ManagerLoginService;
-=======
-=======
 import com.yi.entity.Permission;
->>>>>>> master
 import com.yi.entity.TbStudent;
 import com.yi.mapper.PermissionMapper;
 import com.yi.mapper.TbStudentMapper;
->>>>>>> master
 import com.yi.service.StudentLoginService;
 import com.yi.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,22 +15,6 @@ import java.util.List;
 @Service
 public class StudentLoginServiceImpl implements StudentLoginService {
     @Autowired
-<<<<<<< HEAD
-    private TbStudentMapper tbStudentMapper;
-
-
-    @Override
-    public Result goLoginByName(String name, String password) {
-        return null;
-    }
-
-    @Override
-    public Result goLoginByPhone(String phone, String password) {
-        return null;
-    }
-
-    @Override
-=======
     private TbStudentMapper studentMapper;
     @Autowired
     private PermissionMapper mapper;
@@ -66,7 +40,6 @@ public class StudentLoginServiceImpl implements StudentLoginService {
     }
 
     @Override
->>>>>>> master
     public Result logout() {
         return null;
     }

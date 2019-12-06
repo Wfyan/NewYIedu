@@ -118,7 +118,9 @@
     select
     <include refid="Base_Column_List" />
     from video_info
-    where title like "%"#{title}"%"
+    where title like CONCAT(CONCAT('%',#{title},'%'))
+    ORDER BY vid
+    <!--where title like "%"#{title}"%"-->
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
     select

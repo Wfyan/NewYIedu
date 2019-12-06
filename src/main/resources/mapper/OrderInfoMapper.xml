@@ -108,4 +108,36 @@
     <include refid="Base_Column_List" />
     from order_info
   </select>
+  <select id="multiCriteriaQuery" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from order_info
+    <where>
+      <if test="orderId != null" >
+        and order_id = #{orderId,jdbcType=VARCHAR}
+      </if>
+      <if test="stuid != null" >
+        and stuid = #{stuid,jdbcType=VARCHAR}
+      </if>
+      <if test="cid != null" >
+        and cid = #{cid,jdbcType=INTEGER}
+      </if>
+      <if test="price != null" >
+        and price = #{price,jdbcType=DOUBLE}
+      </if>
+      <if test="onpay != null" >
+        and onpay = #{onpay,jdbcType=INTEGER}
+      </if>
+      <!--<if test="addtime !=null and addtime !=''">
+        and addtime = #{addtime,jdbcType=TIMESTAMP}
+      </if>-->
+      <if test="beforeDate != null and afterDate != null">
+        AND addtime &gt;= #{beforeDate} and addtime  &lt;=  #{afterDate}
+      </if>
+    </where>
+  </select>
+  <select id="count" resultType="java.lang.Integer">
+    select count(*)
+    from order_info
+  </select>
 </mapper>

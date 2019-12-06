@@ -43,7 +43,7 @@ public class VideoInfoController {
         return videoInfoService.insert(record)> 0 ? new Result().successMessage("添加成功") : new Result().error("添加失败");
     }
 
-    public String  upload(MultipartFile multipartFile, HttpServletRequest request){
+    public String upload(MultipartFile multipartFile, HttpServletRequest request){
         FileUploadTool fileUploadTool = new FileUploadTool();
         try {
             String url = fileUploadTool.createFile(multipartFile, request);

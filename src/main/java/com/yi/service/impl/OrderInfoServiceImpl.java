@@ -6,6 +6,7 @@ import com.yi.service.OrderInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -46,5 +47,15 @@ public class OrderInfoServiceImpl implements OrderInfoService {
     @Override
     public List<OrderInfo> selectAll() {
         return orderInfoMapper.selectAll();
+    }
+
+    @Override
+    public List<OrderInfo> multiCriteriaQuery(String orderId, String stuid, Integer cid, Double price, Integer onpay, Date addtime) {
+        return orderInfoMapper.multiCriteriaQuery(orderId,stuid, cid, price, onpay, addtime);
+    }
+
+    @Override
+    public int count() {
+        return orderInfoMapper.count();
     }
 }
