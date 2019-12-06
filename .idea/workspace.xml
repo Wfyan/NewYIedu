@@ -11,58 +11,58 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/RolePermissionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbCommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbCommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbManagerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbManagerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbStudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbStudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbTeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbTeacherMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/ManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/PermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/ReplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TbCommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TbCommentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TbManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TbManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TbStudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TbStudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TbTeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TbTeacherMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/CommentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/ManagerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/PermissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/PermissionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/RolePermissionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/RolesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/RolesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbManagerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbManagerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbReplyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbReplyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/PermissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/PermissionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbCommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbCommentMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbStudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbStudentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/ManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/ManagerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbTeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/mapper/TbTeacherMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/PermissionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/PermissionService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/ManagerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/ManagerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/CommentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/PermissionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/PermissionServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbReplyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/com/yi/service/impl/TeacherServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/PermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/PermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbCommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbCommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbStudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbStudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbTeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/YIedu/WEB-INF/classes/mapper/TbTeacherMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/CommentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/ManagerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/PermissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/PermissionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/RolePermissionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/RolesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/RolesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbManagerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbManagerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbReplyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbReplyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/mapper/PermissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/mapper/PermissionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbCommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbCommentMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbStudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbStudentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/ManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/ManagerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbTeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/mapper/TbTeacherMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/PermissionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/PermissionService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/impl/ManagerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/impl/ManagerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/impl/CommentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/impl/PermissionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/impl/PermissionServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TbManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TbManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TbReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TbReplyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yi/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yi/service/impl/TeacherServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TbCommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TbCommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/TbStudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TbStudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TbTeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TbTeacherMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,11 +77,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+            <state relative-caret-position="129">
+              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,20 +89,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/ReplyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="34" selection-start-line="34" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="540">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/CommentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="129" column="9" lean-forward="true" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
+            <state relative-caret-position="562">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-134">
+              <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,12 +195,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerLoginServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherLoginServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/RolePermissionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/ReplyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbReplyMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TbReplyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/ReplyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/ReplyController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TbManagerMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbManagerMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/ManagerService.java" />
@@ -194,20 +210,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/TeacherService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/TeacherServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TbTeacherMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbCommentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TbCommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/CommentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/TbStudentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/PermissionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yi/service/impl/PermissionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/ReplyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java" />
       </list>
     </option>
   </component>
@@ -248,10 +266,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="170" />
+    <option name="y" value="91" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -261,8 +279,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,25 +335,6 @@
               <item name="YIedu" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yi" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="YIedu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YIedu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yi" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="YIedu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YIedu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -368,6 +365,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -464,6 +463,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 8.5.34" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.34" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="YIedu:war">
@@ -474,6 +474,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_YIedu" />
+        <option name="HTTP_PORT" value="8088" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -584,6 +585,8 @@
       <workItem from="1575468522762" duration="3131000" />
       <workItem from="1575505832634" duration="4866000" />
       <workItem from="1575530021016" duration="8743000" />
+      <workItem from="1575545623347" duration="3018000" />
+      <workItem from="1575592341868" duration="1402000" />
     </task>
     <servers />
   </component>
@@ -620,13 +623,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117952000" />
+    <option name="totallyTimeSpent" value="122372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7442623" visible="true" weight="0.23600605" />
-      <window_info id="Structure" order="1" sideWeight="0.2557377" side_tool="true" visible="true" weight="0.23600605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.739229" visible="true" weight="0.22239032" />
+      <window_info id="Structure" order="1" sideWeight="0.26077098" side_tool="true" visible="true" weight="0.22239032" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -635,7 +639,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16393442" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27704918" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.21147542" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -789,16 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/StudentLoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -940,16 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/ReplyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TbManagerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1009,26 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/ManagerLoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1043,37 +1007,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/RolePermissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/RolePermissionController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/TbManagerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,34 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/CommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1323#1324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1186,27 +1096,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/service/impl/CommentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        <state relative-caret-position="654">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="129" column="9" lean-forward="true" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
+        <state relative-caret-position="38">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/RolesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/mapper/PermissionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="34" selection-start-line="34" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="638">
+          <caret line="32" column="57" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1562">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/ReplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yi/controller/PermissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

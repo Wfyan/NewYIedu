@@ -33,7 +33,7 @@ public class ManagerController {
     @ApiOperation(value = "添加管理员",httpMethod = "POST",response = Result.class,notes = "添加管理员")
     @PostMapping("/insert")
     public Result insert(@RequestBody TbManager manager){
-        return service.insert(manager) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        return service.insertSelective(manager) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
     }
 
     @ApiOperation(value = "查询特定管理员",httpMethod = "GET",response = Result.class,notes = "根据Id查询管理员")

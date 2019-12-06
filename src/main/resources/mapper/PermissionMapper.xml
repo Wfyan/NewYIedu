@@ -120,13 +120,13 @@
     <include refid="Base_Column_List" />
     from permission where roleandpermission >= #{roleId}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selects" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from permission
     <where>
     <if test="title != null">
-      title = #{title}
+      title like concat('%',#{title},'%')
     </if>
     </where>
   </select>
@@ -136,7 +136,7 @@
     from permission
     <where>
     <if test="title != null">
-      title = #{title}
+      title like concat('%',#{title},'%')
     </if>
     </where>
   </select>

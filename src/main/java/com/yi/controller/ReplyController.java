@@ -32,7 +32,7 @@ public class ReplyController {
     @ApiOperation(value = "发表回复",httpMethod = "POST",response = Result.class,notes = "添加")
     @PostMapping("/insert")
     public Result insert(@RequestBody TbReply reply){
-        return service.insert(reply) > 0 ? new Result().successMessage("回复成功！"):new Result("回复失败！");
+        return service.insertSelective(reply) > 0 ? new Result().successMessage("回复成功！"):new Result("回复失败！");
     }
 
     @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")

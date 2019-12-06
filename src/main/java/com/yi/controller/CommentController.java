@@ -32,7 +32,7 @@ public class CommentController {
     @ApiOperation(value = "发表评论",httpMethod = "POST",response = Result.class,notes = "添加")
     @PostMapping("/insert")
     public Result insert(@RequestBody TbComment comment){
-        return service.insert(comment) > 0 ? new Result().successMessage("发表成功！"):new Result("发表失败！");
+        return service.insertSelective(comment) > 0 ? new Result().successMessage("发表成功！"):new Result("发表失败！");
     }
 
     @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")

@@ -221,12 +221,6 @@
     where tecid = #{tecid,jdbcType=VARCHAR}
   </update>
 
-  <select id="selectAll" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from tb_teacher
-  </select>
-
   <select id="getByName" resultMap="BaseResultMap">
     select * from tb_teacher where tecname = #{tecname}
   </select>
@@ -235,5 +229,34 @@
   </select>
   <select id="selectByPhone" resultMap="BaseResultMap">
     select * from tb_teacher where phone = #{ phone }
+  </select>
+
+  <select id="selects" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_teacher
+    <where>
+      <if test="state != 999">
+        state = #{state}
+      </if>
+      <if test="phone != null">
+        AND phone = #{phone}
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND registertime &gt;= #{beforeDate} and registertime  &lt;=  #{afterDate}
+      </if>
+    </where>
+  </select>
+
+  <select id="counts" resultType="java.lang.Integer">
+    select count(*) from tb_teacher
+    <where>
+      <if test="state != 999">
+        state = #{state}
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND registertime &gt;= #{beforeDate} and registertime  &lt;=  #{afterDate}
+      </if>
+    </where>
   </select>
 </mapper>

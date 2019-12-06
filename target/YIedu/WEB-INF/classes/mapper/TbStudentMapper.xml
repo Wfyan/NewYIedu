@@ -242,7 +242,7 @@
     select * from tb_student where phone = #{ phone }
   </select>
 
-  <select id="selectByMultiple" resultMap="BaseResultMap">
+  <select id="selects" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from tb_student

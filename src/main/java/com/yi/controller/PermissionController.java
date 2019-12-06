@@ -29,10 +29,17 @@ public class PermissionController {
      * @param permission
      * @return
      */
-    @ApiOperation(value = "添加权限",httpMethod = "POST",response = Result.class,notes = "添加权限")
+    @ApiOperation(value = "添加权限",httpMethod = "POST",response = Result.class,notes = "添加权限" +
+            "{\n" +
+            "  \"dirName\": \"demo\",\n" +
+            "  \"icon\": \"demo\",\n" +
+            "  \"parenttitle\": \"string\",\n" +
+            "  \"title\": \"string\",\n" +
+            "  \"url\": \"string\"\n" +
+            "}")
     @PostMapping("/insert")
     public Result insert(@RequestBody Permission permission){
-        return service.insert(permission) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        return service.insertSelective(permission) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
     }
 
     @ApiOperation(value = "查询特定权限",httpMethod = "GET",response = Result.class,notes = "根据Id查询特定权限")
