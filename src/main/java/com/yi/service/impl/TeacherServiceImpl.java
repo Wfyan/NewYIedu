@@ -44,11 +44,6 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public List<TbTeacher> selectAll() {
-        return mapper.selectAll();
-    }
-
-    @Override
     public List<TbTeacher> getByName(String tecname) {
         return mapper.getByName(tecname);
     }
@@ -61,5 +56,15 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public TbTeacher selectByPhone(String phone) {
         return mapper.selectByPhone(phone);
+    }
+
+    @Override
+    public List<TbTeacher> selects(Integer state, String phone, String beforeDate, String afterDate) {
+        return mapper.selects(state,phone,beforeDate,afterDate);
+    }
+
+    @Override
+    public int counts(Integer state, String beforeDate, String afterDate) {
+        return mapper.counts(state, beforeDate, afterDate);
     }
 }

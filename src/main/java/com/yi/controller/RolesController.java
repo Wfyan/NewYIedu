@@ -33,7 +33,7 @@ public class RolesController {
     @ApiOperation(value = "添加",httpMethod = "POST",response = Result.class,notes = "添加")
     @PostMapping("/insert")
     public Result insert(@RequestBody Roles roles){
-        return service.insert(roles) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        return service.insertSelective(roles) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
     }
 
     @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")
@@ -64,7 +64,7 @@ public class RolesController {
     public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
         PageHelper.startPage(pageNum,pageSize);
         List<Roles> list =service.selectAll();
-        if(list == null){
+        if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
             return new Result().success(list,list.size());

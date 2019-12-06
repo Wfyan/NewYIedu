@@ -20,7 +20,13 @@ public interface PermissionService {
      * 查询所有数据
      * @return
      */
-    List<Permission> selectAll();
+    List<Permission> selects(String title);
+    /**
+     * 统计总数，用于分页
+     * @param title
+     * @return
+     */
+    int counts(String title);
     /**
      * 根据角色ID查询相关权限
      * @param roleId

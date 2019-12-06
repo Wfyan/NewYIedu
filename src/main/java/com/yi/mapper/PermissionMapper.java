@@ -17,11 +17,6 @@ public interface PermissionMapper {
     int updateByPrimaryKeySelective(Permission record);
 
     int updateByPrimaryKey(Permission record);
-    /**
-     * 查询所有数据
-     * @return
-     */
-    List<Permission> selectAll();
 
     /**
      * 根据角色ID查询相关权限
@@ -29,4 +24,19 @@ public interface PermissionMapper {
      * @return
      */
     List<Permission> selectByLevel(@Param("roleId") Integer roleId);
+
+    /**
+     * 根据状态查询所有
+     * @param title
+     * @return
+     */
+    List<Permission> selects(@Param("title") String title);
+
+    /**
+     * 统计总数，用于分页
+     * @param title
+     * @return
+     */
+    int counts(@Param("title") String title);
+
 }

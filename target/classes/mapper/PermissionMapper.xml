@@ -115,14 +115,29 @@
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </update>
 
-  <select id="selectAll" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from permission
-  </select>
   <select id="selectByLevel" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from permission where roleandpermission >= #{roleId}
+  </select>
+  <select id="selects" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from permission
+    <where>
+    <if test="title != null">
+      title like concat('%',#{title},'%')
+    </if>
+    </where>
+  </select>
+
+  <select id="counts" resultType="java.lang.Integer">
+    select count(*)
+    from permission
+    <where>
+    <if test="title != null">
+      title like concat('%',#{title},'%')
+    </if>
+    </where>
   </select>
 </mapper>

@@ -44,11 +44,6 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<TbStudent> selectAll() {
-        return mapper.selectAll();
-    }
-
-    @Override
     public List<TbStudent> getByName(String stuname) {
         return mapper.getByName(stuname);
     }
@@ -61,5 +56,15 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public TbStudent selectByPhone(String phone) {
         return mapper.selectByPhone(phone);
+    }
+
+    @Override
+    public List<TbStudent> selects(Integer state, String phone, String beforeDate, String afterDate) {
+        return mapper.selects(state,phone,beforeDate,afterDate);
+    }
+
+    @Override
+    public int counts(Integer state, String beforeDate, String afterDate) {
+        return mapper.counts(state,beforeDate,afterDate);
     }
 }

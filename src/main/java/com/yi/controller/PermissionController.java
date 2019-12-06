@@ -29,10 +29,17 @@ public class PermissionController {
      * @param permission
      * @return
      */
-    @ApiOperation(value = "添加权限",httpMethod = "POST",response = Result.class,notes = "添加权限")
+    @ApiOperation(value = "添加权限",httpMethod = "POST",response = Result.class,notes = "添加权限" +
+            "{\n" +
+            "  \"dirName\": \"demo\",\n" +
+            "  \"icon\": \"demo\",\n" +
+            "  \"parenttitle\": \"string\",\n" +
+            "  \"title\": \"string\",\n" +
+            "  \"url\": \"string\"\n" +
+            "}")
     @PostMapping("/insert")
     public Result insert(@RequestBody Permission permission){
-        return service.insert(permission) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        return service.insertSelective(permission) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
     }
 
     @ApiOperation(value = "查询特定权限",httpMethod = "GET",response = Result.class,notes = "根据Id查询特定权限")
@@ -49,7 +56,7 @@ public class PermissionController {
     @ApiOperation(value = "更新权限信息",httpMethod = "POST",response = Result.class,notes = "根据Id更新权限信息")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody Permission permission){
-        return service.updateByPrimaryKey(permission) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+        return service.updateByPrimaryKeySelective(permission) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
     /**
@@ -58,15 +65,17 @@ public class PermissionController {
      * @param pageSize
      * @return
      */
-    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有权限信息（接受页码和页码大小两个参数）")
-    @GetMapping("/selectAll")
-    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,
+            notes = "查询所有权限信息（接受页码和页码大小两个参数）根据名称模糊查询")
+    @GetMapping("/selects")
+    public Result selects(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize,
+                            String title){
         PageHelper.startPage(pageNum,pageSize);
-        List<Permission> list =service.selectAll();
-        if(list == null){
+        List<Permission> list =service.selects(title);
+        if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
-            return new Result().success(list,list.size());
+            return new Result().success(list,service.counts(title));
         }
     }
 

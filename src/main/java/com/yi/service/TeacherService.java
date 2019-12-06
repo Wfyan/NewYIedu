@@ -18,11 +18,6 @@ public interface TeacherService {
     int updateByPrimaryKey(TbTeacher record);
 
     /**
-     * 查询所有数据
-     * @return
-     */
-    List<TbTeacher> selectAll();
-    /**
      * 根据用户名获取信息
      * @param tecname
      * @return
@@ -41,4 +36,20 @@ public interface TeacherService {
      * @return
      */
     TbTeacher selectByPhone(String phone);
+    /**
+     * 根据手机号/状态/时间组合查询 也用于查询所有
+     * @param state
+     * @param phone
+     * @param beforeDate
+     * @param afterDate
+     * @return
+     */
+    List<TbTeacher> selects(Integer state,String phone, String beforeDate, String afterDate);
+
+    /**
+     * 统计总数，用于分页
+     * @param state
+     * @return
+     */
+    int counts(Integer state,String beforeDate,String afterDate);
 }

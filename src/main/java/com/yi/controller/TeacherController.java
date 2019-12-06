@@ -51,25 +51,7 @@ public class TeacherController {
     @ApiOperation(value = "根据ID更新",httpMethod = "POST",response = Result.class,notes = "根据ID更新")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody TbTeacher teacher){
-        return service.updateByPrimaryKey(teacher) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
-    }
-
-    /**
-     * 查询所有数据
-     * @param pageNum
-     * @param pageSize
-     * @return
-     */
-    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有（接受页码和页码大小两个参数）")
-    @GetMapping("/selectAll")
-    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
-        PageHelper.startPage(pageNum,pageSize);
-        List<TbTeacher> list =service.selectAll();
-        if(list == null){
-            return new Result().successMessage("无数据");
-        }else{
-            return new Result().success(list,list.size());
-        }
+        return service.updateByPrimaryKeySelective(teacher) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
     @ApiOperation(value = "根据手机号查询",httpMethod = "GET",response = Result.class,notes = "根据手机号查询特定学生")
@@ -80,6 +62,22 @@ public class TeacherController {
             return new Result().successMessage("无数据");
         }else{
             return new Result().success(teacher);
+        }
+    }
+
+    @ApiOperation(value = "组合查询",httpMethod = "GET",response = Result.class,
+            notes = "根据手机号/状态/时间组合查询 也用于查询所有")
+    @GetMapping("/selects")
+    public Result selects(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize,
+                                   String phone,@RequestParam(defaultValue = "0") int state, String beforeDate, String afterDate){
+        PageHelper.startPage(pageNum,pageSize);
+        List<TbTeacher> list = service.selects(state,phone,beforeDate,afterDate);
+        if (list.size() == 0){
+            return new Result().successMessage("无数据");
+        } else if(phone != null){
+            return new Result().success(list,1);
+        }else {
+            return new Result().success(list,service.counts(state,beforeDate,afterDate));
         }
     }
 
