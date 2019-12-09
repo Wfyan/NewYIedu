@@ -7,13 +7,15 @@ public class VideoInfo {
 
     private Integer cid;
 
-    private String name;
+    private String title;
 
     private Date time;
 
     private String onchoose;
 
     private String videoIntroduce;
+
+    private String vurl;
 
     public Integer getVid() {
         return vid;
@@ -31,12 +33,12 @@ public class VideoInfo {
         this.cid = cid;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     public Date getTime() {
@@ -61,5 +63,13 @@ public class VideoInfo {
 
     public void setVideoIntroduce(String videoIntroduce) {
         this.videoIntroduce = videoIntroduce == null ? null : videoIntroduce.trim();
+    }
+
+    public String getVurl() {
+        return vurl;
+    }
+
+    public void setVurl(String vurl) {
+        this.vurl = vurl;
     }
 }

@@ -1,7 +1,10 @@
 package com.yi.service.impl;
 
 import com.yi.dto.LoginOk;
+import com.yi.entity.Permission;
 import com.yi.entity.TbManager;
+import com.yi.mapper.PermissionMapper;
+import com.yi.mapper.RolePermissionMapper;
 import com.yi.mapper.TbManagerMapper;
 import com.yi.mapper.TbStudentMapper;
 import com.yi.service.ManagerLoginService;
@@ -9,10 +12,14 @@ import com.yi.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ManagerLoginServiceImpl implements ManagerLoginService {
     @Autowired
     private TbManagerMapper managerMapper;
+    @Autowired
+    private PermissionMapper mapper;
 
     /**
      * 管理员使用账号密码登录
@@ -27,14 +34,16 @@ public class ManagerLoginServiceImpl implements ManagerLoginService {
             return Result.error("账号无效");
         }
         if(manager.getPassword().equals(password)){
-            return Result.successMessage("登录成功",loginOk(manager));
+            return Result.successMessage("登录成功",loginOk(manager,mapper.selectByLevel(1)));
         }
         return Result.error("用户名或密码错误");
     }
-    private static LoginOk loginOk(TbManager manager){
+    private static LoginOk loginOk(TbManager manager, List<Permission> permissions){
         LoginOk loginOk = new LoginOk();
         loginOk.setName(manager.getName());
-        loginOk.setId(manager.getId());
+        loginOk.setId(manager.getId().toString());
+        loginOk.setRoleId(manager.getRoleId());
+        loginOk.setList(permissions);
         return loginOk;
     }
 

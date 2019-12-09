@@ -103,4 +103,20 @@
       state = #{state,jdbcType=INTEGER}
     where rep_id = #{repId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_reply
+  </select>
+  <select id="selectByComId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_reply where com_id = #{comId}
+  </select>
+  <select id="selectByStuid" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_reply where stuid = #{stuid}
+  </select>
 </mapper>

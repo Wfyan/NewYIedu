@@ -62,4 +62,9 @@ public class ManagerServiceImpl implements ManagerService {
     public TbManager selectByPhone(String phone) {
         return mapper.selectByPhone(phone);
     }
+
+    @Override
+    public int counts() {
+        return mapper.counts();
+    }
 }

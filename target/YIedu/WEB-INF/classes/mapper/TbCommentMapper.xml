@@ -103,4 +103,61 @@
       state = #{state,jdbcType=INTEGER}
     where com_id = #{comId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_comment
+    <where>
+    <if test="state != 999">
+      state = #{state}
+    </if>
+    </where>
+  </select>
+
+  <select id="count" resultType="java.lang.Integer">
+    select count(*) from tb_comment
+    <where>
+      <if test="state != 999">
+        state = #{state}
+      </if>
+    </where>
+  </select>
+
+  <select id="selectByMultiple" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+     from tb_comment
+     <where>
+       <if test="cid != 0">
+         cid = #{cid}
+       </if>
+       <if test="state != 999">
+         AND state = #{state}
+       </if>
+       <if test="stuid != null">
+         AND stuid = #{stuid}
+       </if>
+       <if test="beforeDate != null and afterDate != null">
+         AND com_time &gt;= #{beforeDate} and com_time  &lt;=  #{afterDate}
+       </if>
+     </where>
+  </select>
+  <select id="counts" resultType="java.lang.Integer">
+    select count(*) from tb_comment
+    <where>
+      <if test="cid != 0">
+        cid = #{cid}
+      </if>
+      <if test="state != 999">
+        AND state = #{state}
+      </if>
+      <if test="stuid != null">
+        AND stuid = #{stuid}
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND com_time &gt;= #{beforeDate} and com_time  &lt;=  #{afterDate}
+      </if>
+    </where>
+  </select>
 </mapper>

@@ -232,6 +232,7 @@
     where stuid = #{stuid,jdbcType=VARCHAR}
   </update>
 
+<<<<<<< HEAD
   <select id="selectAll" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
@@ -244,10 +245,47 @@
   <select id="goLoginByName" resultMap="BaseResultMap">
     select * from tb_student where stuname = #{ stuname } and stupassword = #{stupassword}
   </select>
+=======
+  <select id="getByName" resultMap="BaseResultMap">
+    select * from tb_student where stuname = #{stuname}
+  </select>
+>>>>>>> 49f47aeeb41f5292483bd371ccca8aa008c67c08
   <select id="goLoginByPhone" resultMap="BaseResultMap">
     select * from tb_student where phone = #{ phone } and stupassword = #{stupassword}
   </select>
   <select id="selectByPhone" resultMap="BaseResultMap">
     select * from tb_student where phone = #{ phone }
   </select>
+<<<<<<< HEAD
+=======
+
+  <select id="selects" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_student
+    <where>
+      <if test="state != 999">
+        state = #{state}
+      </if>
+      <if test="phone != null">
+        AND phone = #{phone}
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND registertime &gt;= #{beforeDate} and registertime  &lt;=  #{afterDate}
+      </if>
+    </where>
+  </select>
+
+  <select id="counts" resultType="java.lang.Integer">
+    select count(*) from tb_student
+    <where>
+      <if test="state != 999">
+        state = #{state}
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND registertime &gt;= #{beforeDate} and registertime  &lt;=  #{afterDate}
+      </if>
+    </where>
+  </select>
+>>>>>>> 49f47aeeb41f5292483bd371ccca8aa008c67c08
 </mapper>

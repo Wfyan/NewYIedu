@@ -12,6 +12,9 @@
   <sql id="Base_Column_List" >
     order_id, stuid, cid, price, onpay, addtime
   </sql>
+  <sql id="Extension_Column_List" >
+    order_id, stuid, o.cid, o.price, onpay, addtime
+  </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
@@ -103,4 +106,68 @@
       addtime = #{addtime,jdbcType=TIMESTAMP}
     where order_id = #{orderId,jdbcType=VARCHAR}
   </update>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from order_info
+  </select>
+  <select id="multiCriteriaQuery" resultMap="BaseResultMap">
+    select
+    <include refid="Extension_Column_List" />
+    from order_info o
+    inner join crouse_info c on o.cid = c.cid
+    inner join tb_teacher t on c.tecid = t.tecid
+    <where>
+      <if test="cname != null" >
+        and cname like CONCAT(CONCAT('%',#{cname},'%'))
+      </if>
+      <if test="price != null and price > 0 " >
+        and o.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and o.price = 0
+      </if>
+      <if test="onpay != null" >
+        and onpay = #{onpay,jdbcType=INTEGER}
+      </if>
+      <!--<if test="addtime !=null and addtime !=''">
+        and addtime = #{addtime,jdbcType=TIMESTAMP}
+      </if>-->
+      <if test="beforeDate != null and afterDate != null">
+        AND addtime &gt;= #{beforeDate} and addtime  &lt;=  #{afterDate}
+      </if>
+      <if test="tecname != null" >
+        and tecname = #{tecname,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+  <select id="count" resultType="java.lang.Integer">
+    select count(*)
+    from order_info o
+  </select>
+  <select id="counts" resultType="java.lang.Integer">
+    select count(*) from order_info o
+    inner join crouse_info c on o.cid = c.cid
+    inner join tb_teacher t on c.tecid = t.tecid
+    <where>
+      <if test="cname != null" >
+        and cname like CONCAT(CONCAT('%',#{cname},'%'))
+      </if>
+      <if test="price != null and price > 0 " >
+        and o.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and o.price = 0
+      </if>
+      <if test="onpay != null" >
+        and onpay = #{onpay,jdbcType=INTEGER}
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND addtime &gt;= #{beforeDate} and addtime  &lt;=  #{afterDate}
+      </if>
+      <if test="tecname != null" >
+        and tecname = #{tecname,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
 </mapper>

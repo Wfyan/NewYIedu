@@ -42,4 +42,9 @@ public interface ManagerService {
      * @return
      */
     TbManager selectByPhone(String phone);
+    /**
+     * 统计总数，用于分页
+     * @return
+     */
+    int counts();
 }

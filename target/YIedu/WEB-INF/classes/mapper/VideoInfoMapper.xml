@@ -4,13 +4,14 @@
   <resultMap id="BaseResultMap" type="com.yi.entity.VideoInfo" >
     <id column="vid" property="vid" jdbcType="INTEGER" />
     <result column="cid" property="cid" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="time" property="time" jdbcType="TIME" />
     <result column="onchoose" property="onchoose" jdbcType="CHAR" />
     <result column="video_introduce" property="videoIntroduce" jdbcType="VARCHAR" />
+    <result column="vurl" property="vurl" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    vid, cid, name, time, onchoose, video_introduce
+    vid, cid, title, time, onchoose, video_introduce, vurl
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -23,11 +24,11 @@
     where vid = #{vid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.yi.entity.VideoInfo" >
-    insert into video_info (vid, cid, name, 
-      time, onchoose, video_introduce
+    insert into video_info (vid, cid, title,
+      time, onchoose, video_introduce, vurl
       )
-    values (#{vid,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
-      #{time,jdbcType=TIME}, #{onchoose,jdbcType=CHAR}, #{videoIntroduce,jdbcType=VARCHAR}
+    values (#{vid,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR},
+      #{time,jdbcType=TIME}, #{onchoose,jdbcType=CHAR}, #{videoIntroduce,jdbcType=VARCHAR}, #{vurl,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.yi.entity.VideoInfo" >
@@ -39,8 +40,8 @@
       <if test="cid != null" >
         cid,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="title != null" >
+        title,
       </if>
       <if test="time != null" >
         time,
@@ -51,6 +52,9 @@
       <if test="videoIntroduce != null" >
         video_introduce,
       </if>
+      <if test="vurl != null" >
+        vurl,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="vid != null" >
@@ -59,8 +63,8 @@
       <if test="cid != null" >
         #{cid,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
       </if>
       <if test="time != null" >
         #{time,jdbcType=TIME},
@@ -71,6 +75,9 @@
       <if test="videoIntroduce != null" >
         #{videoIntroduce,jdbcType=VARCHAR},
       </if>
+      <if test="vurl != null" >
+        #{vurl,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.yi.entity.VideoInfo" >
@@ -79,8 +86,8 @@
       <if test="cid != null" >
         cid = #{cid,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
       </if>
       <if test="time != null" >
         time = #{time,jdbcType=TIME},
@@ -91,16 +98,33 @@
       <if test="videoIntroduce != null" >
         video_introduce = #{videoIntroduce,jdbcType=VARCHAR},
       </if>
+      <if test="vurl != null" >
+        vurl = #{vurl,jdbcType=VARCHAR},
+      </if>
     </set>
     where vid = #{vid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.yi.entity.VideoInfo" >
     update video_info
     set cid = #{cid,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
       time = #{time,jdbcType=TIME},
       onchoose = #{onchoose,jdbcType=CHAR},
-      video_introduce = #{videoIntroduce,jdbcType=VARCHAR}
+      video_introduce = #{videoIntroduce,jdbcType=VARCHAR},
+      vurl = #{vurl,jdbcType=VARCHAR}
     where vid = #{vid,jdbcType=INTEGER}
   </update>
+  <select id="fuzzyQueryByName" parameterType="java.lang.String" resultType="com.yi.entity.VideoInfo">
+    select
+    <include refid="Base_Column_List" />
+    from video_info
+    where title like CONCAT(CONCAT('%',#{title},'%'))
+    ORDER BY vid
+    <!--where title like "%"#{title}"%"-->
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from video_info
+  </select>
 </mapper>

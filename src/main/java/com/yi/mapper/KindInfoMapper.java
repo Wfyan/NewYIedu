@@ -1,5 +1,6 @@
 package com.yi.mapper;
 
+import com.yi.dto.KindInfoQueryCriteria;
 import com.yi.entity.KindInfo;
 
 import java.util.List;
@@ -16,10 +17,12 @@ public interface KindInfoMapper {
 
     int updateByPrimaryKeySelective(KindInfo record);
 
-    int updateByPrimaryKey(KindInfo record);
+    int updateByPrimaryKey(KindInfoQueryCriteria record);
 
-    List<Integer> selectHigher(Integer level);
+    List<KindInfo> selectByLevel(Integer level);
 
-    List<Map<String, Object>> selectAll(int higherId);
+    KindInfo selectByName(String name);
+
+    List<KindInfo> selectAll();
 
 }

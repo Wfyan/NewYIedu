@@ -1,14 +1,14 @@
 package com.yi.service;
 
+import com.yi.dto.KindInfoQueryCriteria;
 import com.yi.entity.KindInfo;
 
 import java.util.List;
-import java.util.Map;
 
 public interface KindInfoService {
     int deleteByPrimaryKey(Integer kid);
 
-    int insert(String kindName, Integer higherId, Integer level);
+    int insert(KindInfo record);
 
     int insertSelective(KindInfo record);
 
@@ -16,10 +16,12 @@ public interface KindInfoService {
 
     int updateByPrimaryKeySelective(KindInfo record);
 
-    int updateByPrimaryKey(KindInfo record);
+    int updateByPrimaryKey(KindInfoQueryCriteria record);
 
-    List<Integer> selectHigher(Integer level);
+    List<KindInfo> selectByLevel(Integer level);
 
-    List<Map<String, Object>> selectAll(int higherId);
+    KindInfo selectByName(String kindName);
+
+    List<KindInfo> selectAll();
 
 }
