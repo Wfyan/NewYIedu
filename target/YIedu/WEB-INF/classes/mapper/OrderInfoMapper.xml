@@ -121,8 +121,11 @@
       <if test="cname != null" >
         and cname like CONCAT(CONCAT('%',#{cname},'%'))
       </if>
-      <if test="price != null" >
-        and price = #{price,jdbcType=DOUBLE}
+      <if test="price != null and price > 0 " >
+        and o.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and o.price = 0
       </if>
       <if test="onpay != null" >
         and onpay = #{onpay,jdbcType=INTEGER}
@@ -150,8 +153,11 @@
       <if test="cname != null" >
         and cname like CONCAT(CONCAT('%',#{cname},'%'))
       </if>
-      <if test="price != null" >
-        and price = #{price,jdbcType=DOUBLE}
+      <if test="price != null and price > 0 " >
+        and o.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and o.price = 0
       </if>
       <if test="onpay != null" >
         and onpay = #{onpay,jdbcType=INTEGER}

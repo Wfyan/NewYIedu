@@ -224,8 +224,11 @@
       <if test="beforeDate != null and afterDate != null">
         AND add_day &gt;= #{beforeDate} and add_day  &lt;=  #{afterDate}
       </if>
-      <if test="price != null" >
-        and c.price = #{price,jdbcType=DOUBLE}
+      <if test="price != null and price > 0 " >
+        and c.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and c.price = 0
       </if>
       <if test="tecname != null" >
         and tecname = #{tecname,jdbcType=VARCHAR}
@@ -251,8 +254,11 @@
       <if test="beforeDate != null and afterDate != null">
         AND add_day &gt;= #{beforeDate} and add_day  &lt;=  #{afterDate}
       </if>
-      <if test="price != null" >
-        and c.price = #{price,jdbcType=DOUBLE}
+      <if test="price != null and price > 0 " >
+        and c.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and c.price = 0
       </if>
       <if test="tecname != null" >
         and tecname = #{tecname,jdbcType=VARCHAR}
