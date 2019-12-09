@@ -27,4 +27,10 @@ public interface RolePermissionMapper {
      * @return
      */
     List<RolePermission> selectByRoleId(@Param("roleId") Integer roleId);
+    /**
+     * 统计总数，用于分页
+     * @param roleId
+     * @return
+     */
+    int countByRoleId(@Param("roleId") Integer roleId);
 }

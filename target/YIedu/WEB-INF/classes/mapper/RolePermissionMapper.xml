@@ -90,4 +90,11 @@
     <include refid="Base_Column_List" />
     from role_permission where role_id = #{roleId}
   </select>
+
+  <select id="countByRoleId" resultType="java.lang.Integer">
+    select count(*)
+    from role_permission
+    where role_id = #{roleId}
+  </select>
+
 </mapper>

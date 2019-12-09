@@ -16,14 +16,16 @@ public interface RolePermissionService {
     int updateByPrimaryKeySelective(RolePermission record);
 
     int updateByPrimaryKey(RolePermission record);
-    /**
-     * 查询所有数据
-     * @return
-     */
-    List<RolePermission> selectAll();
+
     /**
      * 根据角色ID查询所有数据
      * @return
      */
     List<RolePermission> selectByRoleId(Integer roleId);
+    /**
+     * 统计总数，用于分页
+     * @param roleId
+     * @return
+     */
+    int countByRoleId(Integer roleId);
 }

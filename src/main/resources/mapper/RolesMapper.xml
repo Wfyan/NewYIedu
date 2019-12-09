@@ -66,4 +66,7 @@
     <include refid="Base_Column_List" />
     from roles as a where a.name = #{name}
   </select>
+  <select id="count" resultType="java.lang.Integer">
+    select count(*) from roles
+  </select>
 </mapper>

@@ -28,4 +28,9 @@ public interface RolesMapper {
      * @return
      */
     Roles selectByName(@Param("name") String name);
+    /**
+     * 统计总数
+     * @return
+     */
+    int count();
 }

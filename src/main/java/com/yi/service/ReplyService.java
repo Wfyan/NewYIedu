@@ -16,23 +16,20 @@ public interface ReplyService {
     int updateByPrimaryKeySelective(TbReply record);
 
     int updateByPrimaryKey(TbReply record);
-    /**
-     * 查询所有数据
-     * @return
-     */
-    List<TbReply> selectAll();
 
     /**
-     * 查询某个评论下的所有回复
+     * 根据评论ID，学生ID 条件查询
      * @param comId
-     * @return
-     */
-    List<TbReply> selectByComId(Integer comId);
-
-    /**
-     * 查询某个学生用户的所有回复
      * @param stuid
      * @return
      */
-    List<TbReply> selectByStuid(String stuid);
+    List<TbReply> selects(Integer comId, String stuid,Integer state);
+
+    /**
+     * 统计总数，用于分页
+     * @param comId
+     * @param stuid
+     * @return
+     */
+    int counts(Integer comId, String stuid,Integer state);
 }

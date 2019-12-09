@@ -45,17 +45,12 @@ public class ReplyServiceImpl implements ReplyService {
     }
 
     @Override
-    public List<TbReply> selectAll() {
-        return mapper.selectAll();
+    public List<TbReply> selects(Integer comId, String stuid,Integer state) {
+        return mapper.selects(comId,stuid,state);
     }
 
     @Override
-    public List<TbReply> selectByComId(Integer comId) {
-        return mapper.selectByComId(comId);
-    }
-
-    @Override
-    public List<TbReply> selectByStuid(String stuid) {
-        return mapper.selectByStuid(stuid);
+    public int counts(Integer comId, String stuid,Integer state) {
+        return mapper.counts(comId,stuid,state);
     }
 }

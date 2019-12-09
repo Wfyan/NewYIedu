@@ -26,4 +26,9 @@ public interface RolesService {
      * @return
      */
     Roles selectByName(String name);
+    /**
+     * 统计总数
+     * @return
+     */
+    int count();
 }

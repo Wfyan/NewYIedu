@@ -1,7 +1,7 @@
 package com.yi.mapper;
 
+import com.yi.dto.CommentReplyDto;
 import com.yi.entity.TbComment;
-import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public interface TbCommentMapper {
 
     int insertSelective(TbComment record);
 
-    TbComment selectByPrimaryKey(Integer comId);
+    CommentReplyDto selectByPrimaryKey(Integer comId);
 
     int updateByPrimaryKeySelective(TbComment record);
 
@@ -23,7 +23,7 @@ public interface TbCommentMapper {
      * 查询所有数据
      * @return
      */
-    List<TbComment> selectAll(@Param("state") Integer state);
+    List<CommentReplyDto> selectAll(@Param("state") Integer state);
 
     int count(@Param("state") Integer state);
 
@@ -35,7 +35,7 @@ public interface TbCommentMapper {
      * @param afterDate
      * @return
      */
-    List<TbComment> selectByMultiple(@Param("cid") Integer cid, @Param("stuid") String stuid, @Param("state") Integer state,
+    List<CommentReplyDto> selectByMultiple(@Param("cid") Integer cid, @Param("stuid") String stuid, @Param("state") Integer state,
                                      @Param("beforeDate") String beforeDate, @Param("afterDate") String afterDate);
     /**
      * 统计总数，用于分页

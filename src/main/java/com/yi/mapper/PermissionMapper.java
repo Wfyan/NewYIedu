@@ -26,7 +26,7 @@ public interface PermissionMapper {
     List<Permission> selectByLevel(@Param("roleId") Integer roleId);
 
     /**
-     * 根据状态查询所有
+     * 根据权限名称模糊查询
      * @param title
      * @return
      */

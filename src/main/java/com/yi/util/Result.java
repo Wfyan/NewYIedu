@@ -69,8 +69,6 @@ public class Result {
      * code:1028
      *
      * @param message 消息
-     *                data:null
-     *                count:0
      * @return
      */
     public static Result successMessage(String message) {
@@ -82,8 +80,6 @@ public class Result {
      * code:1028
      *
      * @param message 消息
-     *                data:null
-     *                count:0
      * @return
      */
     public static Result successMessage(String message, Object obj) {
@@ -103,14 +99,13 @@ public class Result {
         return new Result(1224, "success", data, count);
     }
 
+
     /**
      * success
      * 成功方法 带数据返回
-     * code:1224
-     * message: success
-     *
+     * code：1224
+     * 默认count：1
      * @param data 数据
-     *             count :0
      * @return
      */
     public static Result success(Object data) {

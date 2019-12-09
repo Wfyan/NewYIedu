@@ -17,7 +17,7 @@ public interface PermissionService {
 
     int updateByPrimaryKey(Permission record);
     /**
-     * 查询所有数据
+     * 根据权限名称模糊查询
      * @return
      */
     List<Permission> selects(String title);

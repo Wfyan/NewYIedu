@@ -50,7 +50,7 @@ public class RolesController {
     @ApiOperation(value = "根据ID更新",httpMethod = "POST",response = Result.class,notes = "根据ID更新")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody Roles roles){
-        return service.updateByPrimaryKey(roles) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+        return service.updateByPrimaryKeySelective(roles) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
     /**
@@ -67,7 +67,7 @@ public class RolesController {
         if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
-            return new Result().success(list,list.size());
+            return new Result().success(list,service.count());
         }
     }
 

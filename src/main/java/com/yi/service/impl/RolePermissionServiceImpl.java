@@ -44,12 +44,12 @@ public class RolePermissionServiceImpl implements RolePermissionService {
     }
 
     @Override
-    public List<RolePermission> selectAll() {
-        return mapper.selectAll();
+    public List<RolePermission> selectByRoleId(Integer roleId) {
+        return mapper.selectByRoleId(roleId);
     }
 
     @Override
-    public List<RolePermission> selectByRoleId(Integer roleId) {
-        return mapper.selectByRoleId(roleId);
+    public int countByRoleId(Integer roleId) {
+        return mapper.countByRoleId(roleId);
     }
 }

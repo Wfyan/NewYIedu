@@ -104,19 +104,34 @@
     where rep_id = #{repId,jdbcType=INTEGER}
   </update>
 
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selects" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from tb_reply
+    <where>
+      <if test="comId != 0">
+        com_id = #{comId}
+      </if>
+      <if test="state != 999">
+        AND state = #{state}
+      </if>
+      <if test="stuid != null">
+        AND stuid = #{stuid}
+      </if>
+    </where>
   </select>
-  <select id="selectByComId" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from tb_reply where com_id = #{comId}
-  </select>
-  <select id="selectByStuid" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from tb_reply where stuid = #{stuid}
+  <select id="counts" resultType="java.lang.Integer">
+    select count(*) from tb_reply
+    <where>
+      <if test="comId != 0">
+        com_id = #{comId}
+      </if>
+      <if test="state != 999">
+        AND state = #{state}
+      </if>
+      <if test="stuid != null">
+        AND stuid = #{stuid}
+      </if>
+    </where>
   </select>
 </mapper>

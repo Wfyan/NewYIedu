@@ -54,7 +54,7 @@ public class TeacherController {
         return service.updateByPrimaryKeySelective(teacher) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
-    @ApiOperation(value = "根据手机号查询",httpMethod = "GET",response = Result.class,notes = "根据手机号查询特定学生")
+    @ApiOperation(value = "根据手机号查询",httpMethod = "GET",response = Result.class,notes = "根据手机号查询特定教师")
     @GetMapping("/selectByPhone")
     public Result selectByPhone(String phone){
         TbTeacher teacher = service.selectByPhone(phone);

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/reply")
 @Api(value = "回复管理业务接口")
@@ -49,46 +50,19 @@ public class ReplyController {
     @ApiOperation(value = "根据ID更新",httpMethod = "POST",response = Result.class,notes = "根据ID更新")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody TbReply reply){
-        return service.updateByPrimaryKey(reply) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+        return service.updateByPrimaryKeySelective(reply) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
-    /**
-     * 查询所有数据
-     * @param pageNum
-     * @param pageSize
-     * @return
-     */
-    @ApiOperation(value = "查询所有",httpMethod = "GET",response = Result.class,notes = "查询所有（接受页码和页码大小两个参数）")
-    @GetMapping("/selectAll")
-    public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
-        PageHelper.startPage(pageNum,pageSize);
-        List<TbReply> list =service.selectAll();
-        if(list.size() == 0){
+    @ApiOperation(value = "组合查询",httpMethod = "GET",response = Result.class,
+            notes = "根据评论ID/学生ID/状态组合查询")
+    @GetMapping("/selects")
+    public Result selects(@RequestParam(defaultValue = "0") int comId, String stuid, @RequestParam(defaultValue = "0") int state){
+        List<TbReply> list = service.selects(comId,stuid,state);
+        if (list.size() == 0){
             return new Result().successMessage("无数据");
-        }else{
-            return new Result().success(list,list.size());
+        } else {
+            return new Result().success(list,service.counts(comId,stuid,state));
         }
     }
-
-    /**
-     * 查询某个评论下的所有回复
-     * @param pageNum
-     * @param pageSize
-     * @param comId
-     * @return
-     */
-    @ApiOperation(value = "查询某个评论下的所有回复",httpMethod = "GET",response = Result.class,
-            notes = "查询某个评论下的所有回复（接受页码和页码大小两个参数）")
-    @GetMapping("/selectByComId")
-    public Result selectByComId(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize,int comId){
-        PageHelper.startPage(pageNum,pageSize);
-        List<TbReply> list =service.selectByComId(comId);
-        if(list.size() == 0){
-            return new Result().successMessage("无数据");
-        }else{
-            return new Result().success(list,list.size());
-        }
-    }
-    
 
 }

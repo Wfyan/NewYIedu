@@ -17,23 +17,20 @@ public interface TbReplyMapper {
     int updateByPrimaryKeySelective(TbReply record);
 
     int updateByPrimaryKey(TbReply record);
-    /**
-     * 查询所有数据
-     * @return
-     */
-    List<TbReply> selectAll();
 
     /**
-     * 查询某个评论下的所有回复
+     * 根据评论ID，学生ID 条件查询
      * @param comId
-     * @return
-     */
-    List<TbReply> selectByComId(@Param("comId") Integer comId);
-
-    /**
-     * 查询某个学生用户的所有回复
      * @param stuid
      * @return
      */
-    List<TbReply> selectByStuid(@Param("stuid") String stuid);
+    List<TbReply> selects(@Param("comId") Integer comId,@Param("stuid") String stuid,@Param("state") Integer state);
+
+    /**
+     * 统计总数，用于分页
+     * @param comId
+     * @param stuid
+     * @return
+     */
+    int counts(@Param("comId") Integer comId,@Param("stuid") String stuid,@Param("state") Integer state);
 }

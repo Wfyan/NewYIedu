@@ -52,4 +52,9 @@ public class RolesServiceImpl implements RolesService {
     public Roles selectByName(String name) {
         return mapper.selectByName(name);
     }
+
+    @Override
+    public int count() {
+        return mapper.count();
+    }
 }

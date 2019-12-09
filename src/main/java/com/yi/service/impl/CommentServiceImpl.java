@@ -1,7 +1,9 @@
 package com.yi.service.impl;
 
+import com.yi.dto.CommentReplyDto;
 import com.yi.entity.TbComment;
 import com.yi.mapper.TbCommentMapper;
+import com.yi.mapper.TbReplyMapper;
 import com.yi.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +14,8 @@ import java.util.List;
 public class CommentServiceImpl implements CommentService {
     @Autowired
     private TbCommentMapper mapper;
+    @Autowired
+    private TbReplyMapper replyMapper;
 
     @Override
     public int deleteByPrimaryKey(Integer comId) {
@@ -29,7 +33,7 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public TbComment selectByPrimaryKey(Integer comId) {
+    public CommentReplyDto selectByPrimaryKey(Integer comId) {
         return mapper.selectByPrimaryKey(comId);
     }
 
@@ -44,8 +48,12 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public List<TbComment> selectAll(Integer state) {
-        return mapper.selectAll(state);
+    public List<CommentReplyDto> selectAll(Integer state) {
+        List<CommentReplyDto> list = mapper.selectAll(state);
+        for(int i=0;i<list.size();i++){
+            list.get(i).setList(replyMapper.selects(list.get(i).getComId(),null,0));
+        }
+        return list;
     }
 
     @Override
@@ -54,8 +62,12 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public List<TbComment> selectByMultiple(Integer cid, String stuid, Integer state, String beforeDate, String afterDate) {
-        return mapper.selectByMultiple(cid, stuid, state, beforeDate, afterDate);
+    public List<CommentReplyDto> selectByMultiple(Integer cid, String stuid, Integer state, String beforeDate, String afterDate) {
+        List<CommentReplyDto> list = mapper.selectByMultiple(cid, stuid, state, beforeDate, afterDate);
+        for(int i=0;i<list.size();i++){
+            list.get(i).setList(replyMapper.selects(list.get(i).getComId(),null,0));
+        }
+        return list;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.yi.controller;
 
 import com.github.pagehelper.PageHelper;
+import com.yi.dto.CommentReplyDto;
 import com.yi.entity.TbComment;
 import com.yi.service.CommentService;
 import com.yi.util.Result;
@@ -38,7 +39,7 @@ public class CommentController {
     @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")
     @GetMapping("/selectByPrimaryKey")
     public Result selectByPrimaryKey(int id){
-        TbComment comment = service.selectByPrimaryKey(id);
+        CommentReplyDto comment = service.selectByPrimaryKey(id);
         if(comment == null){
             return new Result().successMessage("无数据");
         }else{
@@ -49,7 +50,7 @@ public class CommentController {
     @ApiOperation(value = "根据ID更新",httpMethod = "POST",response = Result.class,notes = "根据ID更新")
     @PostMapping("/updateByPrimaryKey")
     public Result updateByPrimaryKey(@RequestBody TbComment comment){
-        return service.updateByPrimaryKey(comment) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
+        return service.updateByPrimaryKeySelective(comment) > 0 ? new Result().successMessage("修改成功"):new Result("修改失败");
     }
 
     /**
@@ -63,7 +64,7 @@ public class CommentController {
     public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize,
                             @RequestParam(defaultValue = "0") int state){
         PageHelper.startPage(pageNum,pageSize);
-        List<TbComment> list =service.selectAll(state);
+        List<CommentReplyDto> list =service.selectAll(state);
         if(list.size() == 0){
             return new Result().successMessage("无数据");
         }else{
@@ -74,9 +75,11 @@ public class CommentController {
     @ApiOperation(value = "组合查询",httpMethod = "GET",response = Result.class,
             notes = "根据课程ID/学生ID/时间组合查询")
     @GetMapping("/selectByMultiple")
-    public Result selectByMultiple(@RequestParam(defaultValue = "0") int cid, String stuid,
+    public Result selectByMultiple(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize,
+                                   @RequestParam(defaultValue = "0") int cid, String stuid,
                                    @RequestParam(defaultValue = "0") int state, String beforeDate, String afterDate){
-        List<TbComment> list = service.selectByMultiple(cid,stuid,state,beforeDate,afterDate);
+        PageHelper.startPage(pageNum,pageSize);
+        List<CommentReplyDto> list = service.selectByMultiple(cid,stuid,state,beforeDate,afterDate);
         if (list.size() == 0){
             return new Result().successMessage("无数据");
         } else {

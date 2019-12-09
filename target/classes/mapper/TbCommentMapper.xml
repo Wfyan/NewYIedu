@@ -12,11 +12,11 @@
   <sql id="Base_Column_List" >
     com_id, cid, stuid, content, com_time, state
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from tb_comment
-    where com_id = #{comId,jdbcType=INTEGER}
+  <select id="selectByPrimaryKey" resultType="com.yi.dto.CommentReplyDto" parameterType="java.lang.Integer" >
+    select c.com_id,c.cid,s.phone,c.content,c.com_time,c.state
+    from tb_comment c
+    left join tb_student s on s.stuid=c.stuid
+    where c.com_id = #{comId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_comment
@@ -104,7 +104,7 @@
     where com_id = #{comId,jdbcType=INTEGER}
   </update>
 
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selectAll" resultType="com.yi.dto.CommentReplyDto">
     select
     <include refid="Base_Column_List" />
     from tb_comment
@@ -124,19 +124,19 @@
     </where>
   </select>
 
-  <select id="selectByMultiple" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-     from tb_comment
+  <select id="selectByMultiple" resultType="com.yi.dto.CommentReplyDto">
+    select c.com_id,c.cid,s.phone,c.content,c.com_time,c.state
+    from tb_comment c
+    left join tb_student s on s.stuid=c.stuid
      <where>
        <if test="cid != 0">
          cid = #{cid}
        </if>
        <if test="state != 999">
-         AND state = #{state}
+         AND c.state = #{state}
        </if>
        <if test="stuid != null">
-         AND stuid = #{stuid}
+         AND c.stuid = #{stuid}
        </if>
        <if test="beforeDate != null and afterDate != null">
          AND com_time &gt;= #{beforeDate} and com_time  &lt;=  #{afterDate}
