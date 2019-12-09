@@ -33,7 +33,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("接口列表 v1.1.0")
                 .description("接口测试")
-                .termsOfServiceUrl("http:/localhost:8080")
+                .termsOfServiceUrl("http://localhost:8080")
                 .version("1.1.0")
                 .build();
     }

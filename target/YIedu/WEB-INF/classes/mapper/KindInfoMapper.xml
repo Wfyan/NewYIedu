@@ -11,7 +11,7 @@
     kid, kind_name, higher_id, level
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from kind_info
     where kid = #{kid,jdbcType=INTEGER}
@@ -21,9 +21,14 @@
     where kid = #{kid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.yi.entity.KindInfo" >
-    insert into kind_info (kid, kind_name, higher_id, 
+<<<<<<< HEAD
+    insert into kind_info ( kind_name, higher_id, level)
+    values ( #{kindName,jdbcType=VARCHAR}, #{higherId,jdbcType=INTEGER},
+=======
+    insert into kind_info (kid, kind_name, higher_id,
       level)
-    values (#{kid,jdbcType=INTEGER}, #{kindName,jdbcType=VARCHAR}, #{higherId,jdbcType=INTEGER}, 
+    values (#{kid,jdbcType=INTEGER}, #{kindName,jdbcType=VARCHAR}, #{higherId,jdbcType=INTEGER},
+>>>>>>> 49f47aeeb41f5292483bd371ccca8aa008c67c08
       #{level,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.yi.entity.KindInfo" >
@@ -69,14 +74,48 @@
       <if test="level != null" >
         level = #{level,jdbcType=INTEGER},
       </if>
+      <if test="kid != null" >
+        kid = #{kid,jdbcType=INTEGER},
+      </if>
     </set>
     where kid = #{kid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yi.entity.KindInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.yi.dto.KindInfoQueryCriteria" >
     update kind_info
     set kind_name = #{kindName,jdbcType=VARCHAR},
       higher_id = #{higherId,jdbcType=INTEGER},
-      level = #{level,jdbcType=INTEGER}
-    where kid = #{kid,jdbcType=INTEGER}
+      level = #{level,jdbcType=INTEGER},
+      kid = #{tranKid}
+    where kid = #{preKid}
   </update>
+<<<<<<< HEAD
+  <select id="selectHigher" resultMap="BaseResultMap" >
+    select kind_name,kid
+    from kind_info
+    where level = #{level,jdbcType=INTEGER}
+  </select>
+  <select id="" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from kind_info
+    where kind_name = #{kindName,jdbcType=VARCHAR}
+=======
+  <select id="selectByLevel" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from kind_info
+    where level = #{level}
+  </select>
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from kind_info
+    where kind_name = #{kind_name,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from kind_info
+>>>>>>> 49f47aeeb41f5292483bd371ccca8aa008c67c08
+  </select>
 </mapper>

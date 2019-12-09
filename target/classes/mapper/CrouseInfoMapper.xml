@@ -19,6 +19,10 @@
     cid, tecid, kid, cname, score, add_day, crouse_time, price, integral, onchoose, crouse_introduce, 
     img
   </sql>
+  <sql id="Extension_Column_List" >
+    c.cid, c.tecid, c.kid, c.cname, c.score, c.add_day, c.crouse_time, c.price, c.integral, c.onchoose, c.crouse_introduce,
+    img
+  </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
@@ -174,4 +178,101 @@
       img = #{img,jdbcType=VARCHAR}
     where cid = #{cid,jdbcType=INTEGER}
   </update>
+  <select id="selectByKid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from crouse_info
+    where kid = #{kid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from crouse_info
+    where cname = #{cname,jdbcType=VARCHAR}
+  </select>
+  <select id="fuzzyQueryByName" parameterType="java.lang.String" resultType="com.yi.entity.CrouseInfo">
+    select
+    <include refid="Base_Column_List" />
+    from crouse_info
+    where cname like CONCAT(CONCAT('%',#{cname},'%'))
+    ORDER BY cid
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from crouse_info
+  </select>
+  <select id="count" resultType="java.lang.Integer">
+    select count(*)
+    from crouse_info
+  </select>
+  <select id="multiCriteriaQuery" resultMap="BaseResultMap">
+    select DISTINCT
+    <include refid="Extension_Column_List" />
+    from crouse_info c
+    left join order_info o on c.cid = o.cid
+    left join kind_info k on c.kid = k.kid
+    left join tb_teacher t on c.tecid = t.tecid
+    left join tb_student s on o.stuid = s.stuid
+    <where>
+      <if test="kindName != null" >
+        and kind_name = #{kindName,jdbcType=VARCHAR}
+      </if>
+      <if test="cname != null" >
+        and cname like CONCAT(CONCAT('%',#{cname},'%'))
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND add_day &gt;= #{beforeDate} and add_day  &lt;=  #{afterDate}
+      </if>
+      <if test="price != null and price > 0 " >
+        and c.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and c.price = 0
+      </if>
+      <if test="tecname != null" >
+        and tecname = #{tecname,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null" >
+        and s.phone = #{phone,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+  <select id="counts" resultType="java.lang.Integer">
+    select DISTINCT count(*) from crouse_info c
+    left join order_info o on c.cid = o.cid
+    left join kind_info k on c.kid = k.kid
+    left join tb_teacher t on c.tecid = t.tecid
+    left join tb_student s on o.stuid = s.stuid
+    <where>
+      <if test="kindName != null" >
+        and kind_name = #{kindName,jdbcType=VARCHAR}
+      </if>
+      <if test="cname != null" >
+        and cname like CONCAT(CONCAT('%',#{cname},'%'))
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND add_day &gt;= #{beforeDate} and add_day  &lt;=  #{afterDate}
+      </if>
+      <if test="price != null and price > 0 " >
+        and c.price > 0
+      </if>
+      <if test="price != null and price == 0" >
+        and c.price = 0
+      </if>
+      <if test="tecname != null" >
+        and tecname = #{tecname,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null" >
+        and s.phone = #{phone,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+  <select id="selectByTecname" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Extension_Column_List" />
+    from crouse_info c
+    inner join tb_teacher t on c.tecid = t.tecid
+    where tecname = #{tecname,jdbcType=VARCHAR}
+  </select>
 </mapper>
