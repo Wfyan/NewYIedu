@@ -207,13 +207,13 @@
     from crouse_info
   </select>
   <select id="multiCriteriaQuery" resultMap="BaseResultMap">
-    select
+    select DISTINCT
     <include refid="Extension_Column_List" />
     from crouse_info c
-    inner join kind_info k on c.kid = k.kid
-    inner join tb_teacher t on c.tecid = t.tecid
-    inner join order_info o on c.cid = o.cid
-    inner join tb_student s on o.stuid = s.stuid
+    left join order_info o on c.cid = o.cid
+    left join kind_info k on c.kid = k.kid
+    left join tb_teacher t on c.tecid = t.tecid
+    left join tb_student s on o.stuid = s.stuid
     <where>
       <if test="kindName != null" >
         and kind_name = #{kindName,jdbcType=VARCHAR}
@@ -236,11 +236,11 @@
     </where>
   </select>
   <select id="counts" resultType="java.lang.Integer">
-    select count(*) from crouse_info c
-    inner join tb_teacher t on c.tecid = t.tecid
-    inner join kind_info k on c.kid = k.kid
-    inner join order_info o on c.cid = o.cid
-    inner join tb_student s on o.stuid = s.stuid
+    select DISTINCT count(*) from crouse_info c
+    left join order_info o on c.cid = o.cid
+    left join kind_info k on c.kid = k.kid
+    left join tb_teacher t on c.tecid = t.tecid
+    left join tb_student s on o.stuid = s.stuid
     <where>
       <if test="kindName != null" >
         and kind_name = #{kindName,jdbcType=VARCHAR}
