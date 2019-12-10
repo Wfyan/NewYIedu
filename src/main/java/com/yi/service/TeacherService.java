@@ -37,6 +37,12 @@ public interface TeacherService {
      */
     TbTeacher selectByPhone(String phone);
     /**
+     * 根据邮箱获取信息
+     * @param email
+     * @return
+     */
+    TbTeacher selectByEmail(String email);
+    /**
      * 根据手机号/状态/时间组合查询 也用于查询所有
      * @param state
      * @param phone

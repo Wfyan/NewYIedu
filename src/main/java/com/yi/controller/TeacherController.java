@@ -32,9 +32,13 @@ public class TeacherController {
      */
     @ApiOperation(value = "添加",httpMethod = "POST",response = Result.class,notes = "添加")
     @PostMapping("/insert")
-    public Result insert(@RequestBody TbTeacher teacher){
+    public Result insert(@RequestBody TbTeacher teacher) {
         teacher.setTecid("1");
-        return service.insertSelective(teacher) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        if (service.selectByPhone(teacher.getPhone()) != null) {
+            return new Result("手机号已注册");
+        }else{
+            return service.insertSelective(teacher) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        }
     }
 
     @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")

@@ -38,6 +38,12 @@ public interface TbTeacherMapper {
      * @return
      */
     TbTeacher selectByPhone(@Param("phone") String phone);
+    /**
+     * 根据邮箱获取信息
+     * @param email
+     * @return
+     */
+    TbTeacher selectByEmail(@Param("email") String email);
 
     /**
      * 根据手机号/状态/时间组合查询 也用于查询所有

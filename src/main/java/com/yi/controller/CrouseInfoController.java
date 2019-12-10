@@ -37,7 +37,7 @@ public class CrouseInfoController {
             String cname = record.getCname();
             CrouseInfo name = crouseInfoService.selectByName(cname);
             if(name == null){
-                return crouseInfoService.insertSelective(record) > 0 ? new Result().successMessage("添加成功"): new Result().error("添加失败");
+                return crouseInfoService.insertSelective(record) > 0 ? new Result().successMessage("添加成功",record.getCid()): new Result().error("添加失败");
             }else {
                 return new Result().error("课程已存在");
             }

@@ -59,6 +59,11 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    public TbTeacher selectByEmail(String email) {
+        return mapper.selectByEmail(email);
+    }
+
+    @Override
     public List<TbTeacher> selects(Integer state, String phone, String beforeDate, String afterDate) {
         return mapper.selects(state,phone,beforeDate,afterDate);
     }
