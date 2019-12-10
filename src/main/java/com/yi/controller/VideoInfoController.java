@@ -121,4 +121,15 @@ public class VideoInfoController {
             return new Result().success(list,list.size());
         }
     }
+
+    @ApiOperation(value = "查询特定视频",httpMethod = "GET",response = Result.class,notes = "根据课程id查询视频")
+    @GetMapping("/selectByCid")
+    public Result selectByCid(Integer cid){
+        List<VideoInfo> list =videoInfoService.selectByCid(cid);
+        if(list == null){
+            return new Result().successMessage("无视频");
+        }else{
+            return new Result().success(list,list.size());
+        }
+    }
 }

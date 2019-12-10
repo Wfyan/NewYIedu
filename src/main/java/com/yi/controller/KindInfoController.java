@@ -37,7 +37,7 @@ public class KindInfoController {
             String kindName = record.getKindName();
             KindInfo name = kindInfoService.selectByName(kindName);
             if(name == null){
-                return kindInfoService.insertSelective(record) > 0 ? new Result().successMessage("添加成功"): new Result().error("添加失败");
+               return kindInfoService.insertSelective(record) > 0 ? new Result().successMessage("添加成功"): new Result().error("添加失败");
             }else {
                 return new Result().error("课程类别已存在");
             }

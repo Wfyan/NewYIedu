@@ -127,4 +127,10 @@
     <include refid="Base_Column_List" />
     from video_info
   </select>
+  <select id="selectByCid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from video_info
+    where cid = #{cid,jdbcType=INTEGER}
+  </select>
 </mapper>
