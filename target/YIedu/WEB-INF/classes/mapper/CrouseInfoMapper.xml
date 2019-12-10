@@ -239,7 +239,7 @@
     </where>
   </select>
   <select id="counts" resultType="java.lang.Integer">
-    select DISTINCT count(*) from crouse_info c
+    select count(DISTINCT c.cid) from crouse_info c
     left join order_info o on c.cid = o.cid
     left join kind_info k on c.kid = k.kid
     left join tb_teacher t on c.tecid = t.tecid

@@ -34,7 +34,7 @@ public class OrderInfoController {
      * @return
      */
     @ApiOperation(value = "添加订单",httpMethod = "POST",response = Result.class,notes = "添加订单")
-    @PostMapping("/insert")
+    @PostMapping("/insertSelective")
     public Result insertOrderInfo(@RequestBody OrderInfo record ){
         try{
             return orderInfoService.insertSelective(record) > 0 ? new Result().successMessage("添加成功"):new Result("添加失败");

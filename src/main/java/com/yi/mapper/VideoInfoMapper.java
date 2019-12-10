@@ -21,4 +21,5 @@ public interface VideoInfoMapper {
 
     List<VideoInfo> selectAll();
 
+    List<VideoInfo> selectByCid(Integer cid);
 }

@@ -53,4 +53,9 @@ public class VideoInfoServiceImpl implements VideoInfoService {
     public List<VideoInfo> selectAll() {
         return videoInfoMapper.selectAll();
     }
+
+    @Override
+    public List<VideoInfo> selectByCid(Integer cid) {
+        return videoInfoMapper.selectByCid(cid);
+    }
 }

@@ -20,4 +20,6 @@ public interface VideoInfoService {
     List<VideoInfo> fuzzyQueryByName(String title);    //模糊查询
 
     List<VideoInfo> selectAll();
+
+    List<VideoInfo> selectByCid(Integer cid);
 }

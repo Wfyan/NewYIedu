@@ -40,7 +40,7 @@ public class VideoInfoController {
 //        String message = "";
         String  url = upload(multipartFile, request);
         record.setVurl(url);
-        return videoInfoService.insert(record)> 0 ? new Result().successMessage("添加成功") : new Result().error("添加失败");
+        return videoInfoService.insertSelective(record)> 0 ? new Result().successMessage("添加成功") : new Result().error("添加失败");
     }
 
     public String upload(MultipartFile multipartFile, HttpServletRequest request){
@@ -115,6 +115,17 @@ public class VideoInfoController {
     public Result selectAll(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
         PageHelper.startPage(pageNum,pageSize);
         List<VideoInfo> list =videoInfoService.selectAll();
+        if(list == null){
+            return new Result().successMessage("无视频");
+        }else{
+            return new Result().success(list,list.size());
+        }
+    }
+
+    @ApiOperation(value = "查询特定视频",httpMethod = "GET",response = Result.class,notes = "根据课程id查询视频")
+    @GetMapping("/selectByCid")
+    public Result selectByCid(Integer cid){
+        List<VideoInfo> list =videoInfoService.selectByCid(cid);
         if(list == null){
             return new Result().successMessage("无视频");
         }else{
