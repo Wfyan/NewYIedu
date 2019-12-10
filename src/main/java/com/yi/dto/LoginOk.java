@@ -9,7 +9,7 @@ public class LoginOk {
     String id;
     String name;
     int roleId;
-    List<RolePermission> list;
+    List<Permission> list;
 
     public String getId() {
         return id;
@@ -35,11 +35,11 @@ public class LoginOk {
         this.roleId = roleId;
     }
 
-    public List<RolePermission> getList() {
+    public List<Permission> getList() {
         return list;
     }
 
-    public void setList(List<RolePermission> list) {
+    public void setList(List<Permission> list) {
         this.list = list;
     }
 }

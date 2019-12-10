@@ -2,9 +2,9 @@ package com.yi.service.impl;
 
 import com.yi.dto.LoginOk;
 
-import com.yi.entity.RolePermission;
+import com.yi.entity.Permission;
 import com.yi.entity.TbStudent;
-import com.yi.mapper.RolePermissionMapper;
+import com.yi.mapper.PermissionMapper;
 import com.yi.mapper.TbStudentMapper;
 
 import com.yi.service.StudentLoginService;
@@ -20,7 +20,7 @@ public class StudentLoginServiceImpl implements StudentLoginService {
     @Autowired
     private TbStudentMapper studentMapper;
     @Autowired
-    private RolePermissionMapper mapper;
+    private PermissionMapper mapper;
 
     @Override
 
@@ -30,12 +30,12 @@ public class StudentLoginServiceImpl implements StudentLoginService {
             return new Result().error("该手机号未注册");
         }
         if(student.getStupassword().equals(password)){
-            return new Result().successMessage("登录成功！",loginOk(student,mapper.selectByRoleId(3)));
+            return new Result().successMessage("登录成功！",loginOk(student,mapper.selectByLevel(3)));
         }
         return new Result().error("账号密码错误！");
 
     }
-    private static LoginOk loginOk(TbStudent student, List<RolePermission> permissions){
+    private static LoginOk loginOk(TbStudent student, List<Permission> permissions){
         LoginOk loginOk =  new LoginOk();
         loginOk.setName(student.getStuname());
         loginOk.setId(student.getPhone());
