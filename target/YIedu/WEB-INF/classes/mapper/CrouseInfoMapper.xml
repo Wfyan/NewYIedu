@@ -46,6 +46,10 @@
       )
   </insert>
   <insert id="insertSelective" parameterType="com.yi.entity.CrouseInfo" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="cid">
+      SELECT LAST_INSERT_ID() AS cid
+    </selectKey>
+
     insert into crouse_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="cid != null" >

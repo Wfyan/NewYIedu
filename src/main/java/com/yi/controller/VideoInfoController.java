@@ -40,7 +40,7 @@ public class VideoInfoController {
 //        String message = "";
         String  url = upload(multipartFile, request);
         record.setVurl(url);
-        return videoInfoService.insert(record)> 0 ? new Result().successMessage("添加成功") : new Result().error("添加失败");
+        return videoInfoService.insertSelective(record)> 0 ? new Result().successMessage("添加成功") : new Result().error("添加失败");
     }
 
     public String upload(MultipartFile multipartFile, HttpServletRequest request){

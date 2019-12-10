@@ -31,19 +31,13 @@ public class KindInfoController {
      * @return
      */
     @ApiOperation(value = "添加课程类别",httpMethod = "POST",response = Result.class,notes = "添加课程类别")
-    @PostMapping("/insert")
+    @PostMapping("/insertSelective")
     public Result insertKindInfo(@RequestBody KindInfo record ){
         try{
             String kindName = record.getKindName();
             KindInfo name = kindInfoService.selectByName(kindName);
             if(name == null){
-                int n = 0;
-                if(record.getLevel()==1){
-                    n = kindInfoService.insertSelective(record);
-                }else{
-                    n = kindInfoService.insert(record);
-                }
-                if(n > 0) return new Result().successMessage("添加成功"); else return new Result().error("添加失败");
+                return kindInfoService.insertSelective(record) > 0 ? new Result().successMessage("添加成功"): new Result().error("添加失败");
             }else {
                 return new Result().error("课程类别已存在");
             }

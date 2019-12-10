@@ -1,6 +1,7 @@
 package com.yi.dto;
 
 import com.yi.entity.Permission;
+import com.yi.entity.RolePermission;
 
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class LoginOk {
     String id;
     String name;
     int roleId;
-    List<Permission> list;
+    List<RolePermission> list;
 
     public String getId() {
         return id;
@@ -34,11 +35,11 @@ public class LoginOk {
         this.roleId = roleId;
     }
 
-    public List<Permission> getList() {
+    public List<RolePermission> getList() {
         return list;
     }
 
-    public void setList(List<Permission> list) {
+    public void setList(List<RolePermission> list) {
         this.list = list;
     }
 }
