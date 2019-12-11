@@ -43,4 +43,19 @@ public class StuIntegralInfoServiceImpl implements StuIntegralInfoService {
     public int updateByPrimaryKey(StuIntegralInfo record) {
         return stuIntegralInfoMapper.updateByPrimaryKey(record);
     }
+
+    @Override
+    public StuIntegralInfo selectByName(String stuid, String name) {
+        return stuIntegralInfoMapper.selectByName(stuid,name);
+    }
+
+    @Override
+    public List<StuIntegralInfo> selects(String stuid, String name, String beforeDate, String afterDate) {
+        return stuIntegralInfoMapper.selects(stuid, name, beforeDate, afterDate);
+    }
+
+    @Override
+    public int counts(String stuid, String name, String beforeDate, String afterDate) {
+        return stuIntegralInfoMapper.counts(stuid, name, beforeDate, afterDate);
+    }
 }
