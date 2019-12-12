@@ -94,7 +94,9 @@ public class OrderInfoController {
             notes = "根据课程名称/价格/支付状态/时间查询订单（接受页码和页码大小两个参数）")
     @GetMapping("/multiCriteriaQuery")
     public Result multiCriteriaQuery(String cname, Double price, Integer onpay,
-                                     String beforeDate, String afterDate, String tecname){
+                                     String beforeDate, String afterDate, String tecname,
+                                     @RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "10") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
         List<OrderInfo> list = orderInfoService.multiCriteriaQuery(cname, price, onpay, beforeDate, afterDate, tecname);
         if (list.size() == 0){
             return new Result().successMessage("无数据");

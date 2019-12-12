@@ -132,7 +132,8 @@ public class KindInfoController {
 
     @ApiOperation(value = "查询特定课程类别",httpMethod = "GET",response = Result.class,notes = "查询推荐课程类别")
     @GetMapping("/selectByAttribute")
-    public Result selectByAttribute(String onchoose){
+    public Result selectByAttribute(String onchoose, @RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
         List<KindInfo> list = kindInfoService.selectByAttribute("1");
         return list.size() == 0 ? new Result().successMessage("无数据") : new Result().success(list, list.size());
     }

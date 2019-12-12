@@ -124,7 +124,8 @@ public class VideoInfoController {
 
     @ApiOperation(value = "查询特定视频",httpMethod = "GET",response = Result.class,notes = "根据课程id查询视频")
     @GetMapping("/selectByCid")
-    public Result selectByCid(Integer cid){
+    public Result selectByCid(Integer cid, @RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
         List<VideoInfo> list =videoInfoService.selectByCid(cid);
         if(list == null){
             return new Result().successMessage("无视频");
