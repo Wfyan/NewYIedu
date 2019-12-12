@@ -26,7 +26,8 @@
     <!--重要！将你的SwaggerConfig配置类注入-->
     <bean class="com.yi.SwaggerConfig"/>
     <!--重要！配置swagger资源不被拦截-->
-    <mvc:resources mapping="swagger/**" location="/WEB-INF/dist/" />
+    <mvc:resources mapping="/video/**" location="/img/" />
+    <mvc:resources mapping="/img/**" location="/img/" />
 
     <!-- 3.配置jsp 显示ViewResolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
