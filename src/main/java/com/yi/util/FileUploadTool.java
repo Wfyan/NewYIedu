@@ -53,10 +53,10 @@ public class FileUploadTool {
             System.out.println("文件为空");
         }
         if (bflag) {
-            String logoPathDir = "/video/";
-//            String logoRealPathDir = request.getSession().getServletContext().getRealPath(logoPathDir);
+            String logoPathDir = "/video";
+            String logoRealPathDir = request.getSession().getServletContext().getRealPath(logoPathDir);
             // 上传到本地磁盘
-            String logoRealPathDir = "D:/MyData/Video/upload";
+//            String logoRealPathDir = "D:/MyData/Video/upload";
             File logoSaveFile = new File(logoRealPathDir);
             if (!logoSaveFile.exists()) {
                 logoSaveFile.mkdirs();
