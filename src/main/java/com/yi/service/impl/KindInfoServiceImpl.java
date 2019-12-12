@@ -54,4 +54,9 @@ public class KindInfoServiceImpl implements KindInfoService {
     @Override
     public List<KindInfo> selectAll(){return kindInfoMapper.selectAll();}
 
+    @Override
+    public List<KindInfo> selectByAttribute(String onchoose) {
+        return kindInfoMapper.selectByAttribute(onchoose);
+    }
+
 }

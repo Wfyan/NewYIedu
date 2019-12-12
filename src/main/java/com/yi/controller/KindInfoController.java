@@ -2,6 +2,7 @@ package com.yi.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.yi.dto.KindInfoQueryCriteria;
+import com.yi.entity.CrouseInfo;
 import com.yi.entity.KindInfo;
 import com.yi.service.KindInfoService;
 import com.yi.util.Result;
@@ -129,14 +130,11 @@ public class KindInfoController {
         }
     }
 
-//    public static void main(String[] args) {
-//        JSONObject  json =new JSONObject();
-//        json.put("a","1");
-//        json.put("b",null);
-//        Integer a =json.getInteger("a");
-//        System.out.println(a);
-//        Integer b =json.getInteger("b");
-//        System.out.println(b);
-//    }
+    @ApiOperation(value = "查询特定课程类别",httpMethod = "GET",response = Result.class,notes = "查询推荐课程类别")
+    @GetMapping("/selectByAttribute")
+    public Result selectByAttribute(String onchoose){
+        List<KindInfo> list = kindInfoService.selectByAttribute("1");
+        return list.size() == 0 ? new Result().successMessage("无数据") : new Result().success(list, list.size());
+    }
 
 }

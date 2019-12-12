@@ -25,4 +25,5 @@ public interface KindInfoMapper {
 
     List<KindInfo> selectAll();
 
+    List<KindInfo> selectByAttribute(String onchoose);
 }

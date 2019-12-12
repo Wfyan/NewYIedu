@@ -102,4 +102,10 @@ public class OrderInfoController {
             return new Result().success(list,orderInfoService.counts(cname, price, onpay, beforeDate, afterDate, tecname));
         }
     }
+
+    @ApiOperation(value = "支付宝支付",httpMethod = "Post",response = Result.class, notes = "支付宝支付")
+    @RequestMapping(value = "/order", method = RequestMethod.POST)
+    public Result order(OrderInfo record) {
+        return new Result(orderInfoService.order(record));
+    }
 }

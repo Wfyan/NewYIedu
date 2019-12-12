@@ -38,4 +38,6 @@ public interface CrouseInfoMapper {
                @Param("price")Double price, @Param("tecname")String tecname, @Param("phone")String phone);
 
     List<CrouseInfo> selectByTecname(String tecname);
+
+    List<CrouseInfo> selectByAttribute(String onchoose);
 }

@@ -24,4 +24,5 @@ public interface KindInfoService {
 
     List<KindInfo> selectAll();
 
+    List<KindInfo> selectByAttribute(String onchoose);
 }
