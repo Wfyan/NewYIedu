@@ -26,4 +26,6 @@ public interface OrderInfoService {
     int count();
 
     int counts(String cname, Double price, Integer onpay, String beforeDate, String afterDate, String tecname);
+
+    String order(OrderInfo record);  //支付宝下单
 }

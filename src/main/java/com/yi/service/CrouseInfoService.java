@@ -36,4 +36,6 @@ public interface CrouseInfoService {
                String tecname, String phone);
 
     List<CrouseInfo> selectByTecname(String tecname);
+
+    List<CrouseInfo> selectByAttribute(String onchoose);
 }

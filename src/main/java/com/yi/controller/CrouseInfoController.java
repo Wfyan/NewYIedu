@@ -136,4 +136,11 @@ public class CrouseInfoController {
         List<CrouseInfo> list = crouseInfoService.selectByTecname(tecname);
         return list.size() == 0 ? new Result().successMessage("无数据") : new Result().success(list, list.size());
     }
+
+    @ApiOperation(value = "查询特定课程",httpMethod = "GET",response = Result.class,notes = "查询推荐课程")
+    @GetMapping("/selectByAttribute")
+    public Result selectByAttribute(String onchoose){
+        List<CrouseInfo> list = crouseInfoService.selectByAttribute("1");
+        return list.size() == 0 ? new Result().successMessage("无数据") : new Result().success(list, list.size());
+    }
 }

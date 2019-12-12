@@ -279,4 +279,10 @@
     inner join tb_teacher t on c.tecid = t.tecid
     where tecname = #{tecname,jdbcType=VARCHAR}
   </select>
+  <select id="selectByAttribute" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from crouse_info
+    where onchoose = #{onchoose,jdbcType=VARCHAR}
+  </select>
 </mapper>

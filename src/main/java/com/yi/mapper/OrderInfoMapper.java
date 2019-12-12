@@ -30,4 +30,5 @@ public interface OrderInfoMapper {
     int counts(@Param("cname")String cname, @Param("price")Double price,
                @Param("onpay")Integer onpay, @Param("beforeDate") String beforeDate,
                @Param("afterDate") String afterDate, @Param("tecname") String tecname);
+
 }

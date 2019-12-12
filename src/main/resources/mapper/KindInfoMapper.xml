@@ -100,4 +100,10 @@
     <include refid="Base_Column_List" />
     from kind_info
   </select>
+  <select id="selectByAttribute" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from kind_info
+    where onchoose = #{onchoose,jdbcType=VARCHAR}
+  </select>
 </mapper>

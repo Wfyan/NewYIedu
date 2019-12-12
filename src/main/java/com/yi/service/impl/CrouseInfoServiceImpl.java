@@ -84,4 +84,9 @@ public class CrouseInfoServiceImpl implements CrouseInfoService {
         return crouseInfoMapper.selectByTecname(tecname);
     }
 
+    @Override
+    public List<CrouseInfo> selectByAttribute(String onchoose) {
+        return crouseInfoMapper.selectByAttribute(onchoose);
+    }
+
 }
