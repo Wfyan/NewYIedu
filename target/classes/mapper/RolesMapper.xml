@@ -22,7 +22,11 @@
     insert into roles (role_id, name)
     values (#{roleId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.yi.entity.Roles" >
+  <insert id="insertSelective" parameterType="com.yi.entity.Roles">
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="roleId">
+      SELECT LAST_INSERT_ID() AS roleId
+    </selectKey>
+
     insert into roles
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="roleId != null" >

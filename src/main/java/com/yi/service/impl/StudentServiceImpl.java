@@ -59,6 +59,11 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public TbStudent selectByEmail(String email) {
+        return mapper.selectByEmail(email);
+    }
+
+    @Override
     public List<TbStudent> selects(Integer state, String phone, String beforeDate, String afterDate) {
         return mapper.selects(state,phone,beforeDate,afterDate);
     }

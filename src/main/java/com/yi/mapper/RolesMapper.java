@@ -3,7 +3,6 @@ package com.yi.mapper;
 import com.yi.entity.Roles;
 import org.apache.ibatis.annotations.Param;
 
-import javax.management.relation.Role;
 import java.util.List;
 
 public interface RolesMapper {

@@ -241,7 +241,9 @@
   <select id="selectByPhone" resultMap="BaseResultMap">
     select * from tb_student where phone = #{ phone }
   </select>
-
+  <select id="selectByEmail" resultMap="BaseResultMap">
+    select * from tb_manager where email = #{ email }
+  </select>
   <select id="selects" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

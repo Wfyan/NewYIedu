@@ -30,11 +30,15 @@ public class StudentController {
      * @param student
      * @return
      */
-    @ApiOperation(value = "添加",httpMethod = "POST",response = Result.class,notes = "添加")
+    @ApiOperation(value = "添加/注册",httpMethod = "POST",response = Result.class,notes = "学生用户注册")
     @PostMapping("/insert")
     public Result insert(@RequestBody TbStudent student){
         student.setStuid("1");
-        return service.insertSelective(student) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        if(service.selectByPhone(student.getPhone())!=null){
+            return new Result("手机号已注册");
+        }else{
+            return service.insertSelective(student) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        }
     }
 
     @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")

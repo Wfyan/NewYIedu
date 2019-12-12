@@ -38,14 +38,20 @@ public interface TbManagerMapper {
      */
     TbManager goLogin(@Param("name") String name, @Param("password") String password);
     /**
+     * 统计总数，用于分页
+     * @return
+     */
+    int counts();
+    /**
      * 根据手机号码获取信息
      * @param phone
      * @return
      */
     TbManager selectByPhone(@Param("phone") String phone);
     /**
-     * 统计总数，用于分页
+     * 根据邮箱获取信息
+     * @param email
      * @return
      */
-    int counts();
+    TbManager selectByEmail(@Param("email") String email);
 }

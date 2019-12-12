@@ -1,6 +1,7 @@
 package com.yi.dto;
 
 import com.yi.entity.Permission;
+import com.yi.entity.RolePermission;
 
 import java.util.List;
 

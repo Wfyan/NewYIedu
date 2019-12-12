@@ -56,4 +56,10 @@ public interface TbStudentMapper {
      * @return
      */
     int counts(@Param("state") Integer state,@Param("beforeDate") String beforeDate,@Param("afterDate") String afterDate);
+    /**
+     * 根据邮箱获取信息
+     * @param email
+     * @return
+     */
+    TbStudent selectByEmail(@Param("email") String email);
 }

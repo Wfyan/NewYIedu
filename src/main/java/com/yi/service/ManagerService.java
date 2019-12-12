@@ -43,6 +43,12 @@ public interface ManagerService {
      */
     TbManager selectByPhone(String phone);
     /**
+     * 根据邮箱获取信息
+     * @param email
+     * @return
+     */
+    TbManager selectByEmail(String email);
+    /**
      * 统计总数，用于分页
      * @return
      */

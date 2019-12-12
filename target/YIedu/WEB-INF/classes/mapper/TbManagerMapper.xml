@@ -106,6 +106,9 @@
   <select id="selectByPhone" resultMap="BaseResultMap">
     select * from tb_manager where phone = #{ phone }
   </select>
+  <select id="selectByEmail" resultMap="BaseResultMap">
+    select * from tb_manager where email = #{ email }
+  </select>
   <select id="counts" resultType="java.lang.Integer">
     select count(*) from tb_manager
   </select>

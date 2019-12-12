@@ -135,4 +135,11 @@
     </if>
     </where>
   </select>
+  <select id="selectByLevel" resultMap="BaseResultMap">
+    select
+    p.permission_id, p.url, p.title, p.icon, p.parenttitle, p.dir_name
+    from permission p
+    left join role_permission s on p.permission_id=s.permission_id
+    where s.role_id = #{roleId}
+  </select>
 </mapper>

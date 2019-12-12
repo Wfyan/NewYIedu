@@ -103,4 +103,48 @@
       state = #{state,jdbcType=INTEGER}
     where inte_id = #{inteId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectByName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from stu_integral_info
+    <where>
+      <if test="stuid != null">
+        stuid = #{stuid}
+      </if>
+      <if test="othername != null">
+        AND other_name = #{othername}
+      </if>
+    </where>
+  </select>
+  <select id="selects" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from stu_integral_info
+    <where>
+      <if test="stuid != null">
+        stuid = #{stuid}
+      </if>
+      <if test="othername != null">
+        AND other_name like concat('%',#{othername},'%')
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND get_time &gt;= #{beforeDate} and get_time  &lt;=  #{afterDate}
+      </if>
+    </where>
+  </select>
+  <select id="counts" resultType="java.lang.Integer">
+    select count(*) from stu_integral_info
+    <where>
+      <if test="stuid != null">
+        stuid = #{stuid}
+      </if>
+      <if test="othername != null">
+        AND other_name like concat('%',#{othername},'%')
+      </if>
+      <if test="beforeDate != null and afterDate != null">
+        AND get_time &gt;= #{beforeDate} and get_time  &lt;=  #{afterDate}
+      </if>
+    </where>
+  </select>
 </mapper>

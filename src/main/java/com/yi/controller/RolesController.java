@@ -33,7 +33,8 @@ public class RolesController {
     @ApiOperation(value = "添加",httpMethod = "POST",response = Result.class,notes = "添加")
     @PostMapping("/insert")
     public Result insert(@RequestBody Roles roles){
-        return service.insertSelective(roles) > 0 ? new Result().successMessage("添加成功！"):new Result("添加失败！");
+        int n = service.insertSelective(roles);
+        return n > 0 ? new Result().successMessage("添加成功",roles.getRoleId()):new Result("添加失败！");
     }
 
     @ApiOperation(value = "根据ID查询",httpMethod = "GET",response = Result.class,notes = "根据ID查询")

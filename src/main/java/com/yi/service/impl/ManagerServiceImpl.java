@@ -64,6 +64,11 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     @Override
+    public TbManager selectByEmail(String email) {
+        return mapper.selectByEmail(email);
+    }
+
+    @Override
     public int counts() {
         return mapper.counts();
     }
